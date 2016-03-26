@@ -1,0 +1,64 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title:       "Marcos V. Pagelkopf Jr"
+description: "Desenvolvedor PHP"
+url:         # the base hostname & protocol for your site
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          America/Sao_Paulo
+markdown:          kramdown
+highlighter:       pygments
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  enable_coderay: false
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: Marcos V. Pagelkopf Jr
+  avatar: avatar.jpg
+  job: "Desenvolvedor"
+  bio: "Sou desenvolvedor, já experimentei várias linguagens e hoje foco no desenvolvimento para web.<br>Atualmente trabalho bastante com a linguangem PHP, e estou começando no Ruby.<br>Além do PHP trabalho com várias outras ferramentas como Git, Docker, Silex, Yii2 e qualquer outra novidade que for melhorar o resultado final do que estiver trabalhando no momento."
+  email: marcos@marcosvpj.com.br
+  disqus-shortname:
+  twitter:
+  facebook:
+  google:
+    plus:
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: marcosvpj
+  stackoverflow: 2271198/marcos
+  linkedin: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  codepen: #username
