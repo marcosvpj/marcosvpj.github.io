@@ -7,12 +7,12 @@ date: 2016-03-26
 ---
 
 
-Nos dias 21 e 21 de março ocorreu em São Paulo o [PHP Experience 2016](http://phpexperience2016.imasters.com.br/), organizado pela [iMasters](http://imasters.com.br/). 
+Nos dias 21 e 22 de março ocorreu em São Paulo o [PHP Experience 2016](http://phpexperience2016.imasters.com.br/), organizado pela [iMasters](http://imasters.com.br/). 
 
-Junto com o [Lucas Teles](http://lucasvst.com), fomos conferir o que a iMaster tinha preparado.
+Junto com [Lucas Teles](http://lucasvst.com), fomos conferir o que a iMaster tinha preparado.
 <!--more-->
 
-O evento foi muito bacana, teve várias palestras interessantes e tambem foi uma oportunidade de fazer networking.
+O evento foi muito bacana, teve várias palestras interessantes e também foi uma oportunidade de fazer networking.
 
 Os dois dias de eventos foram separados em um dia para workshops e outro para palestras.
 
@@ -22,16 +22,16 @@ Participei de dois workshops:
 - APIs bem desenhadas como base para integrações 
 - Agile: Test Driven Design 
 
-O primeiro workshop - apresentado pelo José Vahl, Product Manager da [Sensedia](http://sensedia.com/), focado em APIs foi interessante, foi possivel tirar uns insights bacanas, apesar de não terem se aprofundado muito.
+O primeiro workshop - apresentado pelo José Vahl, Product Manager da [Sensedia](http://sensedia.com/), focado em APIs foi interessante, foi possivel tirar uns insights bacanas, apesar de não terem se aprofundado muito. Mas também foi apresentado uma ferramenta interessante [Swagger](http://swagger.io/).
 
-Consegui ver que hoje estou no caminho correto, mas tenho que melhorar a execução e foi apresentado uma ferramenta interessante [Swagger](http://swagger.io/).
+Consegui ver que hoje estou no caminho correto, mas tenho que melhorar a execução 
 
 Já o sobre Agile e TDD foi bem prátco, mas com legos!
 A Simone Pittner da Agile Coach Adaptworks utilizou de forma muito didática como aplicar o TDD na execução de quase qualquer tarefa - no caso do workshop, legos!
 
 ### Palestras
 
-O segundo dia foi destinado as palestras.
+O segundo dia foi destinado a palestras.
 Das várias palestras que participei, as que mais chamaram atenção foram:
 
 * Keynote: PHP-7, [Guilherme Blanco](https://twitter.com/guilhermeblanco), Lead Architect Carmigo
@@ -45,6 +45,6 @@ Das várias palestras que participei, as que mais chamaram atenção foram:
 
 ### Networking
 
-Além das palestras trazidas pelo pessoal da iMasters foi muito bacana interagir com outros desenvolvedores, trocar experiencias e muitas risadas.
+Além das palestras trazidas pelo pessoal da iMasters, foi muito bacana interagir com outros desenvolvedores, trocar experiencias e muitas risadas.
 
 Finalizo agradecendo a organização da iMasters e a todos os envolvidos - palestrantes e participantes - por esse evento.
