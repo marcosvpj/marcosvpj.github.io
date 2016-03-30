@@ -206,6 +206,13 @@ strong {
 		width: 65%;
 }
 
+
+#links + ul{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
 #technical
 
 /*
