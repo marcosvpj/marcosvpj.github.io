@@ -7,9 +7,9 @@ date: 2016-03-26
 ---
 
 
-Nos dias 21 e 22 de março ocorreu em São Paulo o [PHP Experience 2016](http://phpexperience2016.imasters.com.br/), organizado pela [iMasters](http://imasters.com.br/). 
+Nos dias 21 e 22 de março aconteceu em São Paulo o [PHP Experience 2016](http://phpexperience2016.imasters.com.br/), organizado pela [iMasters](http://imasters.com.br/). 
 
-Junto com [Lucas Teles](http://lucasvst.com), fomos conferir o que a iMaster tinha preparado.
+Junto com [Lucas Teles](http://lucasvst.com), fomos conferir o que a iMasters tinha preparado.
 <!--more-->
 
 O evento foi muito bacana, teve várias palestras interessantes e também foi uma oportunidade de fazer networking.
@@ -45,6 +45,6 @@ Das várias palestras que participei, as que mais chamaram atenção foram:
 
 ### Networking
 
-Além das palestras trazidas pelo pessoal da iMasters, foi muito bacana interagir com outros desenvolvedores, trocar experiencias e muitas risadas.
+Além das palestras trazidas pelo pessoal da iMasters, foi muito bacana interagir com outros desenvolvedores, trocar experiências e muitas risadas.
 
 Finalizo agradecendo a organização da iMasters e a todos os envolvidos - palestrantes e participantes - por esse evento.
