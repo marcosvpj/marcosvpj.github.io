@@ -89,12 +89,12 @@ Contact me and we can talk.
 ## Links
 
 * <i class="fa fa-envelope"></i> <a href="mailto:marcos@marcosvpj.com.br">marcos@marcosvpj.com.br</a><br />
-* <i class="fa fa-globe"></i> <a href="http://marcosvpj.com.br">http://marcosvpj.com.br</a><br />
-* <i class="fa fa-github"></i> <a href="http://github.com/marcosvpj">marcosvpj</a><br />
-* <i class="fa fa-info-circle"></i> <a href="http://about.me/marcosvpj">About.me</a><br />
-<!-- *  <i class="fa fa-twitter"></i> <a href="http://twitter.com/marcosvpj">marcosvpj</a><br /> -->
-*  <i class="fa fa-stack-overflow"></i> <a href="http://stackoverflow.com/users/2271198/marcos">Stack Overflow</a>
-*  <i class="fa fa-stack-overflow"></i> <a href="http://pt.stackoverflow.com/users/2742/marcos">Stack Overflow Português</a>
+* <i class="fa fa-globe"></i> <a href="http://marcosvpj.com.br">marcosvpj.com.br</a><br />
+* <i class="fa fa-github"></i> <a href="http://github.com/marcosvpj">Github<br>github.com/marcosvpj</a><br />
+* <i class="fa fa-info-circle"></i> <a href="http://about.me/marcosvpj">About.me<br>http://about.me/marcosvpj</a><br />
+*  <i class="fa fa-stack-overflow"></i> <a href="http://stackoverflow.com/users/2271198/marcos">Stack Overflow<br>http://stackoverflow.com/users/2271198/marcos</a>
+*  <i class="fa fa-stack-overflow"></i> <a href="http://pt.stackoverflow.com/users/2742/marcos">Stack Overflow Português http://pt.stackoverflow.com/users/2742/marcos</a>
+* <br><br>
 
 <!-- ## Refeencias
 
