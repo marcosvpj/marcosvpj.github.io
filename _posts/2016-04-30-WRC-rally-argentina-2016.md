@@ -197,7 +197,7 @@ Só que não, no decorrer da viagem decidimos nos hospedar em Carlos Paz e não 
 
 Paramos em um posto de combustivel para achar o endereço de algum hotel em Carlos Paz e encontramos o encantador Hotel Temu.
 
-Chegando no hotel descobrimos que os quartos não eram tão encantadores assim.
+Chegando no hotel descobrimos que os quartos não eram tão encantadores assim. Mas o que o hotel pecou na infraestrutura ele me ganhou no atendimento. O melhor e mais engraçado recepcionista que já encontrei.
 
 
 
