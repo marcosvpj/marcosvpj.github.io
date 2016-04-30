@@ -195,11 +195,71 @@ Só que não, no decorrer da viagem decidimos nos hospedar em Carlos Paz e não 
 
 #### Villa Carlos Paz
 
-Paramos em um posto de combustivel para achar o endereço de algum hotel em Carlos Paz e encontramos o encantador Hotel Temu.
+<div class="row">
+	<div class="col s3 photo">
+		<img src="/img/cordoba/hotel-temu.jpg" style="padding: 5px" />
+	</div>
+	<div class="col s9">
+		<p>
+			Paramos em um posto de combustivel para achar o endereço de algum hotel em Carlos Paz e encontramos o encantador Hotel Temu.
+		</p>
+		<p>
+			Chegando no hotel descobrimos que os quartos não eram tão encantadores assim. Mas o que o hotel pecou na infraestrutura ele me ganhou no atendimento. O melhor e mais engraçado recepcionista que já encontrei.
+		</p>
+		<p>
+			Villa Carlos Paz, que lugar bacana. Um dos maiores destinos turisticos dos argentinos. A quantidade de hoteis lembrou Balneário Camboriú.
+		</p>
+		<p>
+			Possui um imenso lago, rodeado por um gramado para a galera aproveitar. E nos seus arredores também existem várias outras pequenas villas, uma mais charmosa que a outra.
+		</p>
+	</div>
+</div>
 
-Chegando no hotel descobrimos que os quartos não eram tão encantadores assim. Mas o que o hotel pecou na infraestrutura ele me ganhou no atendimento. O melhor e mais engraçado recepcionista que já encontrei.
+<img src="/img/cordoba/carlos-paz-parque-3.jpg" class="col s4" style="padding: 5px" />
+<img src="/img/cordoba/carlos-paz-parque-1.jpg" class="col s4" style="padding: 5px" />
+<img src="/img/cordoba/carlos-paz-noite.jpg" class="col s4" style="padding: 5px" />
+
+<div style="clear:both" /><br>
+
+#### O Rally
+
+<div class="row">
+	<div class="col s6">
+		<p>
+			O rally teve várias provas, mas só conseguimos acompanhar de perto apenas duas delas.
+		</p>
+		<p>
+			Havia um grande esquema de segurança por tras das provas, as estradas eram fechadas bem cedo para garantir a segurança dos competidores e espectadores.
+		</p>
+		<p>
+			Para podermos assistr as provas devias estar bem cedo nos locais determinados ou nada feito.
+		</p>
+	</div>
+	<div class="col s6 photo">
+		<img src="/img/cordoba/rally-nascer-sol.jpg" class="" style="padding: 5px" />
+	</div>
+</div>
+
+<img src="/img/cordoba/rally-cedo.jpg" class="col s4" style="padding: 5px" />
+<img src="/img/cordoba/rally-carro-1.jpg" class="col s4" style="padding: 5px" />
+<img src="/img/cordoba/rally-ultrapassagem.jpg" class="col s4" style="padding: 5px" />
+
+<div style="clear:both" />
+
+A noite assistimos ao super especial - uma prova num circuito fechado, onde dois carros corriam juntos.
+
+<img src="/img/cordoba/rally-troca-pneu.jpg" class="col s4" style="padding: 5px" />
+<img src="/img/cordoba/rally-super-especial-1.jpg" class="col s4" style="padding: 5px" />
+<img src="/img/cordoba/rally-super-especial-2.jpg" class="col s4" style="padding: 5px" />
 
 
+<div style="clear:both" /><br>
+
+#### Volta para casa
+
+E ai voltamos para casa.
+
+![Volta pra casa]({{ site.url }}/img/cordoba/volta-pra-casa.jpg)
 
 <div style="clear:both" />
 
