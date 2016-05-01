@@ -4,6 +4,8 @@ title: Mundial de rally em Villa Carlos Paz, Cordoba - Argentina - WRC 2016
 categories: Viagens
 tags: [viagens, fotos, rally]
 date: 2016-04-30
+image:
+  feature: cordoba/rally-carro-capa.jpg
 ---
 
 Depois de muita antecipação e - quase nenhum - planejamento, partimos para Cordoba - Argentina.
@@ -76,7 +78,7 @@ Chegamos já no final da tarde no [Hotel São Luiz](http://www.hsluiz.com.br/sit
 	</div>
 	<div class="col s9">
 		<p>
-			No outro diz aproveitamos para conhecer o museu da FEB - Força Expedicionária Brasileira. Ele fica situado numa antiga estação de trem.
+			No outro dia aproveitamos para conhecer o museu da FEB - Força Expedicionária Brasileira. Ele fica situado numa antiga estação de trem.
 		</p>
 		<p>
 			O pessoal responsável nos informou que esse é o maior museu da FEB da América do Sul. Ele possui em seu acervo armas, medalhas e relíquias da FEB na Segunda Guerra e também pertences pessoais do Marechal Mascarenhas de Morais - comandante da FEB durante a campanha na Itália - entre 1944 e 1945.
@@ -106,7 +108,7 @@ A imigração foi bem tranquila, apenas apresentar os documentos do carro e de i
 
 Com tudo em ordem o primeiro objetivo em solo argentino foi encontrar algum lugar para comprar um chip de celular argentino para nos mantermos conectados e poder utilizar o Google Maps.
 
-Depois disso continuamos com nossa rota até Santa Fé. Foi ai que os planos foram por agua a baixo.
+Depois disso continuamos com nossa rota até Santa Fé. Foi ai que os planos foram por água a baixo.
 
 As chuvas tinham elevado os niveis de varios rios, e por segurança várias Rutas Nacionales estavam fechadas.
 
@@ -232,7 +234,7 @@ Só que não, no decorrer da viagem decidimos nos hospedar em Carlos Paz e não 
 			Havia um grande esquema de segurança por tras das provas, as estradas eram fechadas bem cedo para garantir a segurança dos competidores e espectadores.
 		</p>
 		<p>
-			Para podermos assistr as provas devias estar bem cedo nos locais determinados ou nada feito.
+			Para podermos assistr as provas deviamos estar bem cedo nos locais determinados ou nada feito.
 		</p>
 	</div>
 	<div class="col s6 photo">
