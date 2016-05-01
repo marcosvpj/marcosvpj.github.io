@@ -215,11 +215,11 @@ Só que não, no decorrer da viagem decidimos nos hospedar em Carlos Paz e não 
 	</div>
 </div>
 
-<img src="/img/cordoba/carlos-paz-parque-3.jpg" class="col s4" style="padding: 5px" />
-<img src="/img/cordoba/carlos-paz-parque-1.jpg" class="col s4" style="padding: 5px" />
-<img src="/img/cordoba/carlos-paz-noite.jpg" class="col s4" style="padding: 5px" />
-
-<div style="clear:both" /><br>
+<div class="row">
+	<img src="/img/cordoba/carlos-paz-parque-3.jpg" class="col s4" style="padding: 5px" />
+	<img src="/img/cordoba/carlos-paz-parque-1.jpg" class="col s4" style="padding: 5px" />
+	<img src="/img/cordoba/carlos-paz-noite.jpg" class="col s4" style="padding: 5px" />
+</div>
 
 #### O Rally
 
@@ -236,28 +236,36 @@ Só que não, no decorrer da viagem decidimos nos hospedar em Carlos Paz e não 
 		</p>
 	</div>
 	<div class="col s6 photo">
-		<img src="/img/cordoba/rally-nascer-sol.jpg" class="" style="padding: 5px" />
+		<video controls poster="/img/cordoba/chegada-rally-1.png"  class="col video" data-setup="{}" style="padding: 5px">
+		    <source src="/video/cordoba/chegada-rally-1.webm" type="video/webm">
+		    <source src="/video/cordoba/chegada-rally-1.mp4" type="video/mp4">
+		</video>
 	</div>
 </div>
 
-<img src="/img/cordoba/rally-cedo.jpg" class="col s4" style="padding: 5px" />
-<img src="/img/cordoba/rally-carro-1.jpg" class="col s4" style="padding: 5px" />
-<img src="/img/cordoba/rally-ultrapassagem.jpg" class="col s4" style="padding: 5px" />
+<div class="row">
+	<img src="/img/cordoba/rally-nascer-sol.jpg" class="col s6" style="padding: 5px" />
+	<img src="/img/cordoba/rally-ultrapassagem.jpg" class="col s6" style="padding: 5px" />
+</div>
 
-<div style="clear:both" />
+<div class="row">
+	<img src="/img/cordoba/rally-carro-1.jpg" class="col s4" style="padding: 5px" />
+	<img src="/img/cordoba/rally-cedo.jpg" class="col s4" style="padding: 5px" />
+	<img src="/img/cordoba/rally-troca-pneu.jpg" class="col s4" style="padding: 5px" />
+</div>
 
-A noite assistimos ao super especial - uma prova num circuito fechado, onde dois carros corriam juntos.
+<p>
+	A noite assistimos ao super especial - uma prova num circuito fechado, onde dois carros corriam juntos.
+</p>
 
-<img src="/img/cordoba/rally-troca-pneu.jpg" class="col s4" style="padding: 5px" />
-<img src="/img/cordoba/rally-super-especial-1.jpg" class="col s4" style="padding: 5px" />
-<img src="/img/cordoba/rally-super-especial-2.jpg" class="col s4" style="padding: 5px" />
+<div class="row">
+	<img src="/img/cordoba/rally-super-especial-1.jpg" class="col s6" style="padding: 5px" />
+	<img src="/img/cordoba/rally-super-especial-2.jpg" class="col s6" style="padding: 5px" />
+</div>
 
 
-<div style="clear:both" /><br>
 
 #### Volta para casa
-
-E ai voltamos para casa.
 
 ![Volta pra casa]({{ site.url }}/img/cordoba/volta-pra-casa.jpg)
 
