@@ -4,7 +4,7 @@ title: Curriculum Vitae
 ---
 # Marcos V. Pagelkopf Jr
 Desenvolvedor - Balneário Camboriú/SC
-<br><small>28 anos - Solteiro</small>
+<br><small>27 anos - Solteiro</small>
 
 <div id="webaddress">
 <i class="fa fa-phone"></i> <a href="tel:+554796492097">+55 47 9649-2097</a>
