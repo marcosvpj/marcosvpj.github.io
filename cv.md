@@ -24,7 +24,7 @@ Desenvolvedor - Balneário Camboriú/SC
 Trabalho como desenvolvedor php para o GrupoW ([grupow.com.br](http://www.grupow.com.br)) onde diariamente trabalho em sistemas com grande número de acessos e de grande impacto. Alguns clientes que atendemos e que participei dos projetos: Editora Moderna, Lacta, Cielo, Toddy, Devassa, Pepsico, Beto Carrero entre outros.
 Durante esse tempo tenho trabalhado com grandes sistemas de alcance nacional, com diferentes arquiteturas - aplicações monolíticas e microservices, linguagens - PHP e Groovy, tecnologias, ferramentas e metodologia agile.
 
-E estou sempre disposto a aprender mais, atualmente estou entrando no mundo do Ruby e Rails.
+E nos ultimos meses estou entrando no mundo do Python.
 
 
 ## Experiência Profissional
@@ -75,7 +75,8 @@ __CAC - Universidade Federal de Santa Catarina__ Técnico em Informática
 * HTML and CSS
 * Javascript
 * AngularJS
-* Ruby
+* Python
+* Django
 
  
 ## Idiomas
