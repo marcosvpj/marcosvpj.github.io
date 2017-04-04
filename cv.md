@@ -4,10 +4,10 @@ title: Curriculum Vitae
 ---
 # Marcos V. Pagelkopf Jr
 Desenvolvedor - Balneário Camboriú/SC
-<br><small>27 anos - Solteiro</small>
+<br><small>28 anos - Solteiro</small>
 
 <div id="webaddress">
-<i class="fa fa-phone"></i> <a href="tel:+554796492097">+55 47 9649-2097</a>
+<i class="fa fa-phone"></i> <a href="tel:+554796492097">+55 47 99649-2097</a>
 |
 <a href="mailto:marcos@marcosvpj.com.br">marcos@marcosvpj.com.br</a>
 |
@@ -22,9 +22,7 @@ Desenvolvedor - Balneário Camboriú/SC
 ## Atualmente
 
 Trabalho como desenvolvedor php para o GrupoW ([grupow.com.br](http://www.grupow.com.br)) onde diariamente trabalho em sistemas com grande número de acessos e de grande impacto. Alguns clientes que atendemos e que participei dos projetos: Editora Moderna, Lacta, Cielo, Toddy, Devassa, Pepsico, Beto Carrero entre outros.
-Durante esse tempo tenho trabalhado com grandes sistemas de alcance nacional, com diferentes arquiteturas - aplicações monolíticas e microservices, linguagens - PHP e Groovy, tecnologias, ferramentas e metodologia agile.
-
-E nos ultimos meses estou entrando no mundo do Python.
+Durante esse tempo tenho trabalhado com grandes sistemas de alcance nacional, com diferentes arquiteturas - aplicações monolíticas e microservices, linguagens - PHP, JavaScript e Groovy, tecnologias, ferramentas e metodologia agile.
 
 
 ## Experiência Profissional
@@ -49,6 +47,9 @@ __RTI [[aquicursos.com.br](http://www.aquicursos.com.br/)]__ - Professor de Info
 __UNIVALI [[univali.br](http://univali.br)] - Campus de Itajaí__ - Monitor de Programação - Auxiliar os alunos nas matérias relacionadas a programação (C e PHP).
 
 ## Educação
+
+`2016` 
+__Welcome to the Django__ Curso de Python e Django
 
 `2006-2007`
 __Universidade Do Vale do Itajaí__ Bacharel em Ciência da Computação (_incompleto_)
@@ -83,7 +84,7 @@ __CAC - Universidade Federal de Santa Catarina__ Técnico em Informática
 
 ### Inglês
 
-I have no problems with written english. And can understand pretty much everything the hollywood actors says.
+I have no problems with written english. And I can understand pretty much everything the hollywood actors says.
 Contact me and we can talk.
 
 
@@ -103,4 +104,4 @@ Disponivel sob consulta. -->
 
 <!-- ### Footer
 
-Last updated: Março 2016 -->
+Last updated: Abril 2017 -->
