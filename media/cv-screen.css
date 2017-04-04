@@ -201,9 +201,9 @@ strong {
 
 
 #links + ul{
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  columns: 1;
+  -webkit-columns: 1;
+  -moz-columns: 1;
 }
 
 #technical
