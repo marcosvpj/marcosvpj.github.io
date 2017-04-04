@@ -3,7 +3,7 @@ layout: cv
 title: Curriculum Vitae
 ---
 # Marcos V. Pagelkopf Jr
-Desenvolvedor - Balneário Camboriú/SC
+Desenvolvedor
 <br><small>28 anos - Solteiro</small>
 
 <div id="webaddress">
@@ -28,7 +28,7 @@ Durante esse tempo tenho trabalhado com grandes sistemas de alcance nacional, co
 ## Experiência Profissional
 
 `07/2013-`
-__GrupoW [[grupow.com.br](http://www.grupow.com.br)]__ - Desenvolvedor - Responsável pelo desenvolvimento de sistemas e ecommerce. (PHP, Yii2, Silex, Doctrine, MySQL, Groovy, Docker, AWS)
+__GrupoW [[grupow.com.br](http://www.grupow.com.br)]__ - Desenvolvedor - Responsável pelo desenvolvimento de sistemas e ecommerce. (PHP, JavaScript, Yii2, AngularJS, Silex, Doctrine, MySQL, Groovy, Docker, AWS)
 
 `06/2012-06/2013`
 __RTI [[aquicursos.com.br](http://www.aquicursos.com.br/)]__ - Desenvolvedor -  Responsável pelo desenvolvimento de sites e ecommerce, e ocasionalmente aulas de programação. (PHP, MySQL, JavaScript, OpenCart)
