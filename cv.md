@@ -4,7 +4,7 @@ title: Curriculum Vitae
 ---
 # Marcos V. Pagelkopf Jr
 Desenvolvedor
-<br><small>28 anos - Solteiro</small>
+<br><small id="idade">28 anos - Solteiro</small>
 
 <div id="webaddress">
 <i class="fa fa-phone"></i> <a href="tel:+554796492097">+55 47 99649-2097</a>
@@ -13,21 +13,30 @@ Desenvolvedor
 |
 <a href="http://marcosvpj.com.br">http://marcosvpj.com.br</a>
 |
-<a href="http://github.com/marcosvpj"><i class="fa fa-github"></i> marcosvpj</a>
+<a href="https://github.com/marcosvpj"><i class="fa fa-github"></i> https://github.com/marcosvpj</a>
 <!-- |
 <i class="fa fa-twitter"></i> <a href="http://twitter.com/marcosvpj">marcosvpj</a> -->
 </div>
 
+<br />
 
-## Atualmente
+Atuei no desenvolvimento de sistemas de variados tamanhos, desde pequenos sistemas de gerenciamento financeiro até grandes ecommerces. Em cada sistema tive a oportunidade de trabalhar com diversas tecnologias e arquiteturas diferentes.
 
-Trabalho como desenvolvedor php para o GrupoW ([grupow.com.br](http://www.grupow.com.br)) onde diariamente trabalho em sistemas com grande número de acessos e de grande impacto. Alguns clientes que atendemos e que participei dos projetos: Editora Moderna, Lacta, Cielo, Toddy, Devassa, Pepsico, Beto Carrero entre outros.
-Durante esse tempo tenho trabalhado com grandes sistemas de alcance nacional, com diferentes arquiteturas - aplicações monolíticas e microservices, linguagens - PHP, JavaScript e Groovy, tecnologias, ferramentas e metodologia agile.
+Destaco aqui alguns dos projetos que participei do desenvolvimento:
 
+-- Sistema de geração de códigos promocionais em Groovy utilizando a plataforma AWS Lambda.<br />
+-- Sistema de controle e vendas de livros escolares desenvolvido com PHP (Silex e Doctrine) utilizando uma arquitetura de microserviços.<br />
+-- Sistema de personalização e vendas de embalagens desenvolvido com PHP (Yii2) e AngularJS.<br />
+-- Sistema de sorteio para diversas promoções nacionais desenvolvido com PHP (Yii).<br />
+-- Sistema de geração e controle de boletos bancários desenvolvido com PHP (Yii).<br />
+
+Alguns dos clientes atendidos: Editora Moderna, Lacta, Cielo, Toddy, Devassa, Pepsico, Beto Carrero.
+
+Tenho disponibilidade para viagens e realocação.
 
 ## Experiência Profissional
 
-`07/2013-`
+`07/2013-06/2017`
 __GrupoW [[grupow.com.br](http://www.grupow.com.br)]__ - Desenvolvedor - Responsável pelo desenvolvimento de sistemas e ecommerce. (PHP, JavaScript, Yii2, AngularJS, Silex, Doctrine, MySQL, Groovy, Docker, AWS)
 
 `06/2012-06/2013`

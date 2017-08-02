@@ -165,13 +165,16 @@ a:hover {
 	margin-top: 0em;
 	position: relative;
 	margin-left: 20%;
-	color: #aaa;
 	font-family: Menlo,monospace,sans-serif;
 	font-size: 95%;
 }
 
 #webaddress a {
 	text-decoration: none;
+}
+
+#idade {
+	display: none;
 }
 
 em {
