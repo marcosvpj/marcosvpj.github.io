@@ -70,6 +70,7 @@ __CAC - Universidade Federal de Santa Catarina__ Técnico em Informática
 ## Habilidades Técnicas
 
 * PHP
+* Groovy
 * MVC
 * SOLID
 * Design Patterns
@@ -84,6 +85,7 @@ __CAC - Universidade Federal de Santa Catarina__ Técnico em Informática
 * Docker
 * HTML and CSS
 * Javascript
+* React Native
 * AngularJS
 * Python
 * Django
