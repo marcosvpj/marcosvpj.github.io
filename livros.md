@@ -35,6 +35,12 @@ Aqui irei publicar esses ideias.
 </div>
 
 <div class="col s3 photo" style="padding:1em">
+  <img src="/img/livros/aniquilacao-jeff-vandermeer.jpg" alt="Aniquilação (Comando Sul Livro 1) - Jeff VanderMeer" title="Aniquilação (Comando Sul Livro 1) - Jeff VanderMeer" style="padding:5px" />
+  <strong>Aniquilação<br><small>Jeff VanderMeer</small></strong>
+  <small> - <a href="http://amzn.to/2xZXrE3" target="_blank">Comprar</a></small>
+</div>
+
+<div class="col s3 photo" style="padding:1em">
   <img src="/img/livros/the-checklist-manifesto-atul-gawande.jpg" alt="The Checklist Manifesto - Atul Gawande" title="The Checklist Manifesto - Atul Gawande" style="padding:5px" />
   <strong>The Checklist Manifesto<br><small>Atul Gawande</small></strong>
   <small> - <a href="http://amzn.to/2y2McL3" target="_blank">Comprar</a></small>
