@@ -10,6 +10,9 @@ O problema é que isso demora. Mas existe um atalho. *Livros*.
 
 Lendo podemos aprender com as experiencias de outros que já trilharam o caminho que estamos seguindo agora.
 
+
+Ultimos livros que eu li:
+
 <!-- 
 Biografias são um otimo modo de aprendermos com gigantes.
 
