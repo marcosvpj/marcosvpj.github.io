@@ -1,10 +1,9 @@
 ---
 layout: cv
-title: Curriculum Vitae
+title: Marcos Vinicios Pagelkopf Junior - Curriculum Vitae
 ---
-# Marcos V. Pagelkopf Jr
+# Marcos Vinicios Pagelkopf Jr
 Desenvolvedor
-<br><small id="idade">28 anos - Solteiro</small>
 
 <div id="webaddress">
 <i class="fa fa-phone"></i> <a href="tel:+554796492097">+55 47 99649-2097</a>
@@ -24,6 +23,7 @@ Atuei no desenvolvimento de sistemas de variados tamanhos, desde pequenos sistem
 
 Destaco aqui alguns dos projetos que participei do desenvolvimento:
 
+-- Plataforma online para criação de material gráfico como catalogos e cartões de visita desenvolvido com JavaScript (AngularJS) e PHP [[tradetools.co](http://tradetools.co/)]<br />
 -- Sistema de geração de códigos promocionais em Groovy utilizando a plataforma AWS Lambda.<br />
 -- Sistema de controle e vendas de livros escolares desenvolvido com PHP (Silex e Doctrine) utilizando uma arquitetura de microserviços.<br />
 -- Sistema de personalização e vendas de embalagens desenvolvido com PHP (Yii2) e AngularJS.<br />
@@ -36,40 +36,49 @@ Tenho disponibilidade para viagens e realocação.
 
 ## Experiência Profissional
 
-`07/2013-06/2017`
-__GrupoW [[grupow.com.br](http://www.grupow.com.br)]__ - Desenvolvedor - Responsável pelo desenvolvimento de sistemas e ecommerce. (PHP, JavaScript, Yii2, AngularJS, Silex, Doctrine, MySQL, Groovy, Docker, AWS)
+__Dzigual [[dzigual.com.br](http://www.dzigual.com.br)]__ - _Setembro/2017 - hoje_
 
-`06/2012-06/2013`
-__RTI [[aquicursos.com.br](http://www.aquicursos.com.br/)]__ - Desenvolvedor -  Responsável pelo desenvolvimento de sites e ecommerce, e ocasionalmente aulas de programação. (PHP, MySQL, JavaScript, OpenCart)
+Desenvolvedor - Responsável pelo desenvolvimento de novas funcionalidades e correções de bugs. (JavaScript, PHP, AngularJS, Zend Framework, Eloquent)
 
-`02/2011-08/2011`
-__RAL - Sistemas para Internet__ - Sócio, Desenvolvedor - De tudo um pouco, principalmente programação. (PHP, MySQL, JavaScript, CodeIgniter)
+__GrupoW [[grupow.com.br](http://www.grupow.com.br)]__ - _Julho/2013 - Junho/2017_
+
+Desenvolvedor - Responsável pelo desenvolvimento de sistemas e ecommerce. (PHP, JavaScript, Yii2, AngularJS, Silex, Doctrine, MySQL, Groovy, Docker, AWS)
+
+__RTI [[aquicursos.com.br](http://www.aquicursos.com.br/)]__ - _Junho/2012 - Junho/2013_
+
+Desenvolvedor -  Responsável pelo desenvolvimento de sites e ecommerce, e ocasionalmente aulas de programação. (PHP, MySQL, JavaScript, OpenCart)
+
+__RAL - Sistemas para Internet__ - _Fevereiro/2011 - Agosto/2011_
+
+Sócio, Desenvolvedor - De tudo um pouco, principalmente programação. (PHP, MySQL, JavaScript, CodeIgniter)
 
 
-`12/2010-02/2011`
-__Sinestesia__ - Desenvolvedor - Desenvolvimento de sites. (PHP, Javascript e ActionScript).
+__Sinestesia__ - _Dezembro/2010 - Fevereiro/2011_
 
-`06/2010-12/2010`
-__RTI [[aquicursos.com.br](http://www.aquicursos.com.br/)]__ - Professor de Informática - Aulas de desenvolvimento web (PHP, HTML e CSS) e desenvolvimento de sites.
+Desenvolvedor - Desenvolvimento de sites. (PHP, Javascript e ActionScript).
 
-`10/2009-12/2009`
-__UNIVALI [[univali.br](http://univali.br)] - Campus de Itajaí__ - Monitor de Programação - Auxiliar os alunos nas matérias relacionadas a programação (C e PHP).
+__RTI [[aquicursos.com.br](http://www.aquicursos.com.br/)]__ - _Junho/2010 - Dezembro/2010_
+
+Professor de Informática - Aulas de desenvolvimento web (PHP, HTML e CSS) e desenvolvimento de sites.
+
+__UNIVALI [[univali.br](http://univali.br)] - Campus de Itajaí__ - _Outubro/2009 - Dezembro/2009_
+
+Monitor de Programação - Auxiliar os alunos nas matérias relacionadas a programação (C e PHP).
 
 ## Educação
 
-`2016` 
-__Welcome to the Django__ Curso de Python e Django
+__Welcome to the Django__ - _2016_ - Curso de Python e Django
 
-`2006-2007`
-__Universidade Do Vale do Itajaí__ Bacharel em Ciência da Computação (_incompleto_)
+__Universidade Do Vale do Itajaí__ - _2006 - 2007_ - Bacharel em Ciência da Computação (_incompleto_)
 
-`2004-2006`
-__CAC - Universidade Federal de Santa Catarina__ Técnico em Informática
+__CAC - Universidade Federal de Santa Catarina__ - _2004 - 2006_ - Técnico em Informática
 
 
 ## Habilidades Técnicas
 
+* JavaScript
 * PHP
+* Python
 * Groovy
 * MVC
 * SOLID
@@ -84,16 +93,12 @@ __CAC - Universidade Federal de Santa Catarina__ Técnico em Informática
 * Git
 * Docker
 * HTML and CSS
-* Javascript
-* React Native
 * AngularJS
-* Python
+* React Native
 * Django
 
  
-## Idiomas
-
-### Inglês
+## Inglês
 
 I have no problems with written english. And I can understand pretty much everything the hollywood actors says.
 Contact me and we can talk.
@@ -113,4 +118,4 @@ Disponivel sob consulta. -->
 
 <!-- ### Footer
 
-Last updated: Abril 2017 -->
+Last updated: Março 2018 -->
