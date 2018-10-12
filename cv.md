@@ -67,6 +67,8 @@ Monitor de Programação - Auxiliar os alunos nas matérias relacionadas a progr
 
 ## Educação
 
+__Workshop Go__ - _2018_ - Minicurso sobre Go
+
 __Welcome to the Django__ - _2016_ - Curso de Python e Django
 
 __Universidade Do Vale do Itajaí__ - _2006 - 2007_ - Bacharel em Ciência da Computação (_incompleto_)
@@ -79,6 +81,7 @@ __CAC - Universidade Federal de Santa Catarina__ - _2004 - 2006_ - Técnico em I
 * JavaScript
 * PHP
 * Python
+* Go
 * Groovy
 * MVC
 * SOLID
