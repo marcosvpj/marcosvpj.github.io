@@ -13,13 +13,15 @@ Desenvolvedor
 <a href="http://marcosvpj.com.br">http://marcosvpj.com.br</a>
 |
 <a href="https://github.com/marcosvpj"><i class="fa fa-github"></i> https://github.com/marcosvpj</a>
-<!-- |
-<i class="fa fa-twitter"></i> <a href="http://twitter.com/marcosvpj">marcosvpj</a> -->
+|
+<i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/marcosvpj/">https://www.linkedin.com/in/marcosvpj/</a>
 </div>
 
 <br />
 
-Atuei no desenvolvimento de sistemas de variados tamanhos, desde pequenos sistemas de gerenciamento financeiro até grandes ecommerces. Em cada sistema tive a oportunidade de trabalhar com diversas tecnologias e arquiteturas diferentes.
+Atualmente trabalho com coleta e extração de dados publicos em larga escala. Além do desenvolvimento de bots, também atuo no desenvolvende e manutenção de serviços auxiliares como gerenciamento de proxy e quebra de captcha.
+
+Já atuei no desenvolvimento de sistemas de variados tamanhos, desde pequenos sistemas de gerenciamento financeiro até grandes ecommerces. Em cada sistema tive a oportunidade de trabalhar com diversas tecnologias e arquiteturas diferentes.
 
 Destaco aqui alguns dos projetos que participei do desenvolvimento:
 
@@ -36,7 +38,11 @@ Tenho disponibilidade para viagens e realocação.
 
 ## Experiência Profissional
 
-__Dzigual [[dzigual.com.br](http://www.dzigual.com.br)]__ - _Setembro/2017 - hoje_
+__Neoway [[neoway.com.br](http://ww.neoway.com.br))]__ - _Dezembro/2018 - hoje_
+
+Desenvolvedor - Responsável pelo desenvolvimento e manutenção de bots e serviços para coleta e normalizalização de dados. (Python, Go Scrapy)
+
+__Dzigual [[dzigual.com.br](http://www.dzigual.com.br)]__ - _Setembro/2017 - Novembro/2018_
 
 Desenvolvedor - Responsável pelo desenvolvimento de novas funcionalidades e correções de bugs. (JavaScript, PHP, AngularJS, Zend Framework, Eloquent)
 
@@ -67,6 +73,8 @@ Monitor de Programação - Auxiliar os alunos nas matérias relacionadas a progr
 
 ## Educação
 
+__Uniasselvi__ - _2019-hoje_ - Tecnologo Investigação Forense e Perícia Criminal
+
 __Workshop Go__ - _2018_ - Minicurso sobre Go
 
 __Welcome to the Django__ - _2016_ - Curso de Python e Django
@@ -78,27 +86,27 @@ __CAC - Universidade Federal de Santa Catarina__ - _2004 - 2006_ - Técnico em I
 
 ## Habilidades Técnicas
 
-* JavaScript
-* PHP
 * Python
 * Go
+* PHP
+* JavaScript
 * Groovy
 * MVC
 * SOLID
 * Design Patterns
 * Microservices
 * Teste Automatizados
+* Git
+* Docker
+* Scrapy
 * Yii2
 * Silex
 * Doctrine
 * PHPUnit
 * MySQL
-* Git
-* Docker
 * HTML and CSS
 * AngularJS
 * React Native
-* Django
 
  
 ## Inglês
@@ -121,4 +129,4 @@ Disponivel sob consulta. -->
 
 <!-- ### Footer
 
-Last updated: Março 2018 -->
+Last updated: Outubro 2019 -->
