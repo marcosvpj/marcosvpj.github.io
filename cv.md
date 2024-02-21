@@ -3,7 +3,6 @@ layout: cv
 title: Marcos Vinicios Pagelkopf Junior - Curriculum Vitae
 ---
 # Marcos Vinicios Pagelkopf Jr
-Desenvolvedor
 
 <div id="webaddress">
 <i class="fa fa-phone"></i> <a href="tel:+554796492097">+55 47 99649-2097</a>
@@ -82,13 +81,6 @@ I have no problems with written english. And I can understand pretty much everyt
 Contact me and we can talk.
 
 
-## Links
-
-* <i class="fa fa-globe"></i> <a href="http://marcosvpj.com.br"><strong>Site pessoal:</strong> marcosvpj.com.br</a><br />
-* <i class="fa fa-github"></i> <a href="http://github.com/marcosvpj"><strong>Github:</strong> github.com/marcosvpj</a><br />
-* <i class="fa fa-stack-overflow"></i> <a href="http://pt.stackoverflow.com/users/2742/marcos"><strong>Stack Overflow Português:</strong> http://pt.stackoverflow.com/users/2742/marcos</a>
-* <i class="fa fa-stack-overflow"></i> <a href="http://stackoverflow.com/users/2271198/marcos"><strong>Stack Overflow:</strong> http://stackoverflow.com/users/2271198/marcos</a>
-* <br><br>
 
 <!-- ## Refeencias
 

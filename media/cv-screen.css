@@ -157,9 +157,8 @@ a:hover {
 }
 
 #webaddress {
-	margin-top: 0em;
+	margin-top: 1em;
 	position: relative;
-	margin-left: 20%;
 	font-family: Menlo,monospace,sans-serif;
 	font-size: 95%;
 }
