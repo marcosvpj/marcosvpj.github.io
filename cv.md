@@ -11,7 +11,7 @@ Desenvolvedor
 <a href="mailto:marcos@marcosvpj.com.br">marcos@marcosvpj.com.br</a>
 |
 <a href="http://marcosvpj.com.br">http://marcosvpj.com.br</a>
-|
+<br>
 <a href="https://github.com/marcosvpj"><i class="fa fa-github"></i> https://github.com/marcosvpj</a>
 |
 <i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/marcosvpj/">https://www.linkedin.com/in/marcosvpj/</a>
@@ -23,18 +23,7 @@ Atualmente trabalho como engenheiro de dados, com foco na coleta, extração e e
 
 Já atuei no desenvolvimento de sistemas de variados tamanhos, desde pequenos sistemas de gerenciamento financeiro até grandes ecommerces. Em cada sistema tive a oportunidade de trabalhar com diversas tecnologias e arquiteturas diferentes.
 
-Destaco aqui alguns dos projetos que participei do desenvolvimento:
-
--- Plataforma online para criação de material gráfico como catalogos e cartões de visita desenvolvido com JavaScript (AngularJS) e PHP [[tradetools.co](http://tradetools.co/)]<br />
--- Sistema de geração de códigos promocionais em Groovy utilizando a plataforma AWS Lambda.<br />
--- Sistema de controle e vendas de livros escolares desenvolvido com PHP (Silex e Doctrine) utilizando uma arquitetura de microserviços.<br />
--- Sistema de personalização e vendas de embalagens desenvolvido com PHP (Yii2) e AngularJS.<br />
--- Sistema de sorteio para diversas promoções nacionais desenvolvido com PHP (Yii).<br />
--- Sistema de geração e controle de boletos bancários desenvolvido com PHP (Yii).<br />
-
-Alguns dos clientes atendidos: Editora Moderna, Lacta, Cielo, Toddy, Devassa, Pepsico, Beto Carrero.
-
-Tenho disponibilidade para viagens e realocação.
+Trabalho apenas no formato remoto, mas tenho disponibilidade para viagens ocasionais.
 
 ## Experiência Profissional
 
