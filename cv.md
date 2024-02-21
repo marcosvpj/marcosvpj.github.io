@@ -19,7 +19,7 @@ Desenvolvedor
 
 <br />
 
-Atualmente trabalho com coleta e extração de dados publicos em larga escala. Além do desenvolvimento de bots, também atuo no desenvolvende e manutenção de serviços auxiliares como gerenciamento de proxy e quebra de captcha.
+Atualmente trabalho como engenheiro de dados, com foco na coleta, extração e enriquecimento de dados publicos em larga escala. Além do desenvolvimento de bots, também atuo no desenvolvende e manutenção de serviços auxiliares como gerenciamento de proxy e quebra de captcha.
 
 Já atuei no desenvolvimento de sistemas de variados tamanhos, desde pequenos sistemas de gerenciamento financeiro até grandes ecommerces. Em cada sistema tive a oportunidade de trabalhar com diversas tecnologias e arquiteturas diferentes.
 
@@ -38,9 +38,13 @@ Tenho disponibilidade para viagens e realocação.
 
 ## Experiência Profissional
 
-__Neoway [[neoway.com.br](http://ww.neoway.com.br))]__ - _Dezembro/2018 - hoje_
+__Inovally [[inovally.com.br](https://inovally.com.br/))]__ - _Maio/2023 - Hoje_
 
-Desenvolvedor - Responsável pelo desenvolvimento e manutenção de bots e serviços para coleta e normalizalização de dados. (Python, Go Scrapy)
+Engenheiro de dados - Líder da equipe de desenvolvimento da plataforma de dados, minhas principais responsabilidades envolvem o planejamento e desenvolvimento dos serviços necessários para a coleta, processamento e enriquecimento de dados. (Go, Python)
+
+__Neoway [[neoway.com.br](https://www.neoway.com.br/))]__ - _Dezembro/2018 - Dezembro/2022_
+
+Engenheiro de dados - Responsável pelo desenvolvimento e manutenção de bots e serviços para coleta e normalizalização de dados. (Go, Python, Scrapy)
 
 __Dzigual [[dzigual.com.br](http://www.dzigual.com.br)]__ - _Setembro/2017 - Novembro/2018_
 
@@ -73,8 +77,6 @@ Monitor de Programação - Auxiliar os alunos nas matérias relacionadas a progr
 
 ## Educação
 
-__Tecnologo Investigação Forense e Perícia Criminal__ - _cursando_ - Uniasselvi
-
 __Workshop Go__ - _2018_ - Minicurso sobre Go
 
 __Welcome to the Django__ - _2016_ - Curso de Python e Django
@@ -83,30 +85,6 @@ __Bacharel em Ciência da Computação__ - _2006 - 2007_ -  Universidade Do Vale
 
 __Técnico em Informática__ - _2004 - 2006_ - CAC - Universidade Federal de Santa Catarina 
 
-
-## Habilidades Técnicas
-
-* Python
-* Go
-* PHP
-* JavaScript
-* Groovy
-* MVC
-* SOLID
-* Design Patterns
-* Microservices
-* Teste Automatizados
-* Git
-* Docker
-* Scrapy
-* Yii2
-* Silex
-* Doctrine
-* PHPUnit
-* MySQL
-* HTML and CSS
-* AngularJS
-* React Native
 
  
 ## Inglês
