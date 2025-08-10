@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="cover">
+  <div class="row">
+    <div class="col s12 m12">
+      <div class="table">
+        {% if page.author %} {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %} {% endif %}
+
+        <div class="cover-card table-cell table-top">
+          {% if author.avatar %}
+          <img src="{{ site.url }}/img/{{ author.avatar }}" alt="" class="avatar">
+          {% endif %}
+          <a href="{{ site.url }}/" class="author_name">{{ author.name }}</a>
+          <span class="author_job">{{ author.job }}</span>
+          <span class="author_bio mbm">{{ content }}</span>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <!-- <a href="{{ site.url }}/now">/now</a> -->
+                <a href="{{ site.url }}/cv">/cv</a>
+              </li>
+            </ul>
+          </nav>
+          {% include social-links.html %}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- {% include footer.html %} -->
+  {% include js.html %}
+</body>
+</html>

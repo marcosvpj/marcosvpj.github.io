@@ -33,8 +33,8 @@ kramdown:
 owner:
   name: Marcos V. Pagelkopf Jr
   avatar: avatar.jpg
-  job: "Desenvolvedor"
-  bio: "Sou desenvolvedor, com foco em desenvolvimento para web.<br>Atualmente trabalho com PHP, AngularJS e Python."
+  # job: "Engenheiro de dados | Desenvolvedor Go e Python"
+  bio: ""
   email: marcos@marcosvpj.com.br
   disqus-shortname:
   twitter:
