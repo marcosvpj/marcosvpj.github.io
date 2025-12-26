@@ -1,0 +1,19 @@
+{
+  "list": [
+    {
+      "name": "Sistema solar",
+      "url": "tags/energia-solar/",
+      "desc": "Sistema de geração de energia fotovoltaico que alimenta minha casa"
+    },
+    {
+      "name": "Hidroeletrica",
+      "url": "tags/hidroeletrica/",
+      "desc": "Micro-hidroeletrica (em construção)"
+    },
+    {
+      "name": "Licores",
+      "url": "tags/diy-licores/",
+      "desc": "Um pouco de alquimia pra descontrair"
+    }
+  ]
+}

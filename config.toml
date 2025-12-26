@@ -1,0 +1,158 @@
+baseURL = "https://marcosvpj.com.br/"
+copyright = "Marcos V. Pagelkopf Jr"
+# disqusShortname = ""  # disabled for now
+# googleAnalytics = "UA-75789305-1"  # uncomment to enable
+theme = "hugo-theme-cactus"
+title = "Marcos V. Pagelkopf Jr"
+
+# Multilingual settings
+defaultContentLanguage = "pt"
+defaultContentLanguageInSubdir = false
+
+[build]
+command = "hugo"
+publish = "public"
+[build.environment]
+HUGO_VERSION = "0.83.1"
+[context.production.environment]
+HUGO_VERSION = "0.83.1"
+
+[markup.tableOfContents]
+endLevel = 4
+ordered = false
+startLevel = 2
+[markup.goldmark.renderer]
+unsafe = true
+
+# =============================================================================
+# PERMALINKS
+# =============================================================================
+
+[permalinks]
+posts = "/posts/:slug/"
+
+# =============================================================================
+# LANGUAGES
+# =============================================================================
+
+[languages]
+
+# -----------------------------------------------------------------------------
+# Portuguese (Default)
+# -----------------------------------------------------------------------------
+[languages.pt]
+languageCode = "pt-BR"
+languageName = "Portugues"
+weight = 1
+title = "Marcos V. Pagelkopf Jr"
+
+[languages.pt.params]
+description = "Engenheiro Backend Senior | Go - Python - Sistemas Distribuidos"
+
+[[languages.pt.menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[languages.pt.menu.main]]
+name = "Blog"
+url = "/posts"
+weight = 2
+
+[[languages.pt.menu.main]]
+name = "Projetos"
+url = "/projects"
+weight = 3
+
+[[languages.pt.menu.main]]
+name = "CV"
+url = "/cv"
+weight = 4
+
+[[languages.pt.menu.main]]
+name = "Agora"
+url = "/now"
+weight = 5
+
+[[languages.pt.menu.main]]
+name = "Sobre"
+url = "/about"
+weight = 6
+
+# -----------------------------------------------------------------------------
+# English
+# -----------------------------------------------------------------------------
+[languages.en]
+languageCode = "en-US"
+languageName = "English"
+weight = 2
+title = "Marcos V. Pagelkopf Jr"
+
+[languages.en.params]
+description = "Senior Backend Engineer | Go - Python - Distributed Systems"
+
+[[languages.en.menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "Blog"
+url = "/posts"
+weight = 2
+
+[[languages.en.menu.main]]
+name = "Projects"
+url = "/projects"
+weight = 3
+
+[[languages.en.menu.main]]
+name = "CV"
+url = "/cv"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "Now"
+url = "/now"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "About"
+url = "/about"
+weight = 6
+
+# =============================================================================
+# PARAMS (shared)
+# =============================================================================
+
+[params]
+colortheme = "white"
+dateFormat = "2006-01-02"
+mainSection = "posts"
+postsOnHomePage = 5
+projectsUrl = "https://github.com/marcosvpj"
+rss = true
+showAllPostsOnHomePage = false
+showProjectsList = true
+show_updated = false
+tagsOverview = true
+
+[params.comments]
+enabled = false
+engine = "disqus"
+
+[[params.social]]
+link = "https://github.com/marcosvpj"
+name = "github"
+
+[[params.social]]
+link = "https://linkedin.com/in/marcosvpj"
+name = "linkedin"
+
+[[params.social]]
+link = "https://instagram.com/marcosvpjr"
+name = "instagram"
+
+[[params.social]]
+link = "marcos@marcosvpj.com.br"
+name = "email"

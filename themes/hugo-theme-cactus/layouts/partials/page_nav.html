@@ -1,0 +1,55 @@
+<div id="header-post">
+  <a id="menu-icon" href="#" class="active"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'});" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu" style="visibility: visible;">
+    <span id="nav">
+      <ul>
+        {{ range .Site.Menus.main }} 
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        {{ if .Prev }}
+        <li>
+          <a class="icon" href=" {{ .Prev.Permalink }}">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="toggleVisibility(document.getElementById('i-prev'))" onmouseout="toggleVisibility(document.getElementById('i-prev'))"></i>
+          </a>
+        </li>
+        {{ end }}
+        {{ if .Next }}
+        <li>
+          <a class="icon" href="{{ .Next.Permalink }}">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="toggleVisibility(document.getElementById('i-next'))" onmouseout="toggleVisibility(document.getElementById('i-next'))"></i>
+          </a>
+        </li>
+        {{ end }}
+        <li>
+          <a class="icon" href="#" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'});">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="toggleVisibility(document.getElementById('i-top'))" onmouseout="toggleVisibility(document.getElementById('i-top'))"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="toggleVisibility(document.getElementById('i-share'))" onmouseout="toggleVisibility(document.getElementById('i-share'))" onclick="toggleVisibility(document.getElementById('share'))"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      {{ .Scratch.Set "icon_class_name" ""}}
+      {{ partial "share.html" . }}
+    </div>
+    <div id="toc">
+      {{ .TableOfContents }}
+    </div>
+  </span>
+</div>

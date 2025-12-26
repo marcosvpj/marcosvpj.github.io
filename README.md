@@ -1,15 +1,46 @@
-# My personal site
+# Personal Blog
 
-My personal blog build with Jekyll, based on Leonids Themes **[Leonids](http://renyuanz.github.io/leonids)**.
+This is the source code for my personal blog. It is built with [Hugo](https://gohugo.io/) and automatically deployed to GitHub Pages.
 
-Live in **http://marcosvpj.com.br/**
+## Getting Started
 
-## Quick setup
+### Prerequisites
 
-`git clone https://github.com/marcosvpj/marcosvpj.github.io.git`
+Make sure you have [Hugo](https://gohugo.io/getting-started/installing/) installed on your local machine.
 
-`cd marcosvpj.github.io`
+### Running Locally
 
-`jekyll server`
+1. Clone this repository:
+   ```sh
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd blog
+   ```
+3. Start the Hugo server:
+   ```sh
+   hugo server
+   ```
+The site will be available at `http://localhost:1313/`.
 
-Check out the blog at `http://localhost:4000`.
+## Creating a New Post
+
+To create a new blog post, run the following command:
+
+```sh
+hugo new posts/my-new-post.md
+```
+
+This will create a new Markdown file in the `content/posts` directory. You can then edit this file to add your content.
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages whenever new changes are pushed to the `src` branch.
+
+There is also a manual deployment script available:
+
+```sh
+./deploy.sh
+```
+This script will build the site and push the `public` directory to the `master` branch.

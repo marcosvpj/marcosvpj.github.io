@@ -1,0 +1,25 @@
+{{ define "main"}}
+<article>
+  <ul class="post-list content">
+    {{ range (sort .Paginator.Pages ".Params.categories") }}
+    {{ $pageYear := .Params.categories }}
+    {{ if (ne $pageYear ($.Scratch.Get "year")) }}
+    {{ $.Scratch.Set "year" $pageYear }}
+    <h1>{{ $pageYear }}</h1>
+    {{ end }}
+    <a class="" href="{{ .Permalink }}" style="margin-bottom: 2em;">
+      <h2 style="margin: 0px;">{{ if .Title }} {{ .Title }} {{ else }} Untitled {{ end }}</h2>
+      <li class="post-item">
+        <div class="meta">
+          <img src="{{ if .Params.cover }} {{ .Params.cover }} {{ else }} https://source.unsplash.com/random/100x100 {{ end }}" width="100px" alt="{{ if .Title }} {{ .Title }} {{ else }} Untitled {{ end }}" style="margin-top: 1.3em">
+        </div>
+        <span>
+          <p>{{ if .Description }} {{ .Description }} {{ else }} Description not provided {{ end }}</p>
+        </span>
+      </li>
+    </a>
+    {{ end }}
+  </ul>
+  {{ partial "pagination.html" . }}
+</article>
+{{ end }}

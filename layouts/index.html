@@ -1,0 +1,116 @@
+{{ define "main" }}
+  <section id="about">
+    <div class="intro">
+      {{ if eq .Site.Language.Lang "pt" }}
+      <p class="intro-greeting">Bem vindo a minha casa online, só não repara a bagunça.</p>
+      <p>Artista amador e programador profissional.</p>
+      <p>Atualmente morando <strong>off-grid</strong> em uma area rural no sul do Brasil, alimentado por energia solar e conectado via Starlink. Aqui documento minha jornada entre <a href="/categories/tecnologia/">técnologia</a>, <a href="/categories/off-grid/">vida sustentável</a> e <a href="/categories/arte/">experiencias</a> pelo caminho.</p>
+      {{ else }}
+      <p class="intro-greeting">Hi, I'm <strong>Marcos</strong>.</p>
+      <p>Backend engineer with 7+ years of experience in <strong>Go</strong> and <strong>Python</strong>, specialized in distributed systems and large-scale data processing.</p>
+      <p>Currently living <strong>off-grid</strong> in a rural area, powered by solar energy and connected via Starlink. Here I document my journey between <a href="/en/categories/code/">code</a>, <a href="/en/categories/off-grid/">sustainable living</a>, and <a href="/en/categories/art/">experiences</a> along the way.</p>
+      {{ end }}
+    </div>
+
+    {{ if isset .Site.Params "social" }}
+    <p class="social-links">
+      {{ range $index, $elem := .Site.Params.social}}
+        {{ if eq $elem.name "email" }}
+        <a class="icon" target="_blank" rel="noopener" href="mailto:{{ $elem.link }}" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        {{ else if eq $elem.name "rss" }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" title="RSS">
+          <i class="fas fa-rss"></i>
+        </a>
+        {{ else }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" title="{{ $elem.name | title }}">
+          <i class="fab fa-{{ lower $elem.name }}"></i>
+        </a>
+        {{ end }}
+      {{ end }}
+    </p>
+    {{ end }}
+  </section>
+
+  <section id="writing">
+    {{ if eq .Site.Language.Lang "pt" }}
+    <span class="h1"><a href="{{ .Site.Params.mainSection | relLangURL }}">Textos</a></span>
+    <span class="h2">Mais recentes</span>
+    {{ else }}
+    <span class="h1"><a href="{{ .Site.Params.mainSection | relLangURL }}">Writings</a></span>
+    <span class="h2">Most recent</span>
+    {{ end }}
+
+    {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
+    <ul class="post-list">
+      {{ range (where .Pages "Section" "posts") }}
+      {{ .Scratch.Set "count" 5 }}
+      {{ if isset .Site.Params "postsonhomepage" }}
+        {{ .Scratch.Set "count" .Site.Params.postsOnHomePage }}
+      {{ end }}
+      {{ range (first (.Scratch.Get "count") (sort .Paginator.Pages "Date" "desc")) }}
+        <li class="post-item">
+          <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div>
+          <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a></span>
+        </li>
+      {{ end }}
+      {{ if gt (len .Paginator.Pages) (.Scratch.Get "count") }}
+      <h3><a href="{{ .RelPermalink }}">{{ if eq $.Site.Language.Lang "pt" }}Ver todos os posts{{ else }}Read all posts{{ end }}</a></h3>
+      {{ end }}
+      {{ end }}
+    </ul>
+
+    {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
+    <span class="h2">{{ if eq .Site.Language.Lang "pt" }}Tópicos{{ else }}Topics{{ end }}</span>
+    <span class="widget tagcloud">
+      {{ $AllRegularPagesCount := len .Site.RegularPages }}
+      {{ range $elem := .Site.Taxonomies.tags.Alphabetical }}
+      <a style="font-size: {{ (add 0.5 (mul 5 (div (float $elem.Count) $AllRegularPagesCount))) }}rem;" href="{{ $elem.Page.Permalink }}">
+        {{- .Page.Title -}}
+      </a>
+      {{ end }}
+    </span>
+    {{ end }}
+  </section>
+
+  <section id="projects">
+    {{ if eq .Site.Language.Lang "pt" }}
+    <span class="h1"><a href="/projects/">Projetos</a></span>
+    <p>Meus projetos se dividem geralmente em tres áreas:</p>
+    <ul class="project-list">
+      <li class="project-item"><a href="/categories/off-grid/">Off-grid</a>: Energia solar, autonomia e vida sustentável</li>
+      <li class="project-item"><a href="/categories/arte/">Arte</a>: Fotografia, viagens e cozinha</li>
+      <li class="project-item"><a href="/categories/tecnologia/">Tecnologia</a>: Um pouco de código e um pouco de hardware</li>
+    </ul>
+    {{ $showProjectsList := false }}
+    {{ if .Site.Data.projects }}
+    {{ $showProjectsList = true }}
+    {{ else if (isset .Site.Params "showProjectsList") }}
+    {{ $showProjectsList = .Site.Params.ShowProjectsList }}
+    {{ end }}
+    {{ if $showProjectsList }}
+    <h2>Alguns projetos de destaque:</h2>
+    <ul class="project-list">
+      {{ range (first 5 .Site.Data.projects.list) }}
+      <li class="project-item">
+        <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+      </li>
+      {{ end }}
+    </ul>
+    <h3><a href="/projects/">Ver todos</a></h3>
+    </section>
+    {{ end }}
+
+    {{ else }}
+    <span class="h1"><a href="/en/projects/">Projects</a></span>
+    <p>My projects are divided into three areas:</p>
+    <ul class="project-list">
+      <li class="project-item"><a href="/en/categories/off-grid/">Off-grid</a>: Solar energy, autonomy and sustainable living</li>
+      <li class="project-item"><a href="/en/categories/art/">Art</a>: Photography, travel and literature</li>
+      <li class="project-item"><a href="/en/categories/code/">Code</a>: Go, Python and systems architecture</li>
+    </ul>
+    <h3><a href="/en/projects/">See philosophy and projects</a></h3>
+    {{ end }}
+  </section>
+{{ end }}

@@ -1,0 +1,28 @@
+<footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; {{ now.Format "2006" }} {{ if .Site.Copyright }} {{ print .Site.Copyright }} {{ else }} {{ print .Site.Title }} {{ end }}
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        {{ range .Site.Menus.main }} 
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+        <!-- Language Switcher -->
+        <li class="lang-switch">
+          {{ if .IsTranslated }}
+            {{ range .Translations }}
+              <a href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
+            {{ end }}
+          {{ else }}
+            {{ range .Site.Languages }}
+              {{ if ne $.Site.Language.Lang .Lang }}
+                <a href="{{ .Lang | relURL }}/" title="{{ .LanguageName }}">{{ .LanguageName }}</a>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
