@@ -26,7 +26,7 @@ Trabalho apenas no formato remoto, mas tenho disponibilidade para viagens ocasio
 
 ## Experiência Profissional
 
-__Inovally [[inovally.com.br](https://inovally.com.br/))]__ - _Maio/2023 - Hoje_
+__Inovally [[inovally.com.br](https://inovally.com.br/))]__ - _Maio/2023 - Agosto/2025_
 
 Engenheiro de dados - Líder da equipe de desenvolvimento da plataforma de dados, minhas principais responsabilidades envolvem o planejamento e desenvolvimento dos serviços necessários para a coleta, processamento e enriquecimento de dados. (Go, Python)
 
@@ -88,4 +88,4 @@ Disponivel sob consulta. -->
 
 <!-- ### Footer
 
-Last updated: Outubro 2019 -->
+Last updated: Setembro 2025 -->
