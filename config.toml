@@ -1,7 +1,7 @@
 baseURL = "https://marcosvpj.com.br/"
 copyright = "Marcos V. Pagelkopf Jr"
 # disqusShortname = ""  # disabled for now
-# googleAnalytics = "UA-75789305-1"  # uncomment to enable
+googleAnalytics = "G-17LF90ZFTH"  # uncomment to enable
 theme = "hugo-theme-cactus"
 title = "Marcos V. Pagelkopf Jr"
 
