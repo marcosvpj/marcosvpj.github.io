@@ -59,8 +59,6 @@ Programacao e minha profissao, mas nao e tudo que me define.
 
 **Fotografia** e minha forma de preservar momentos. Nao sou profissional, mas gosto de capturar o que vejo - seja uma paisagem ou um detalhe que passou despercebido.
 
-**Livros** sao atalhos. Atraves deles, aprendo com experiencias de outros sem precisar cometer os mesmos erros. Minha [lista de leitura](/livros/) reflete essa busca constante por conhecimento.
-
 ---
 
 ## O Que Busco
