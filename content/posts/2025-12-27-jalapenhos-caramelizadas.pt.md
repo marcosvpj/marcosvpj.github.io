@@ -15,15 +15,15 @@ Tinha aqui algumas pimentas Jalapenho e decidi tentar algo diferente, Jalapenhos
 
 A receita é bem simples:
 
-- 1 xicara de açucar
-- 1/2 xicara de agua
+- 1 xícara de açúcar
+- 1/2 xícara de água
 - 2 colheres de vinagre
 - Pimentas Jalapenho
 - Condimentos (usei canela e fumaça em pó)
 
-Mistura a agua, o acucar, o vinagre e os condimentos em uma panela e coloque para ferver.
+Mistura a água, o açúcar, o vinagre e os condimentos em uma panela e coloque para ferver.
 
-Enquanto isso corte as pimentas em rodelas. Se gosta de mais picante mantem as semente, se prefere algo mais suave pode remover elas.
+Enquanto isso corte as pimentas em rodelas. Se gosta de mais picante mantém as semente, se prefere algo mais suave pode remover elas.
 
 Quando a mistura ferver, coloque em fogo baixo e adicione as pimentas a mistura e deixe no fogo por uns 4 minutos.
 

@@ -7,11 +7,11 @@ categories = ["off-grid"]
 +++
 
 
-Mais um episodio da saga da hidroeletrica.
+Mais um episódio da saga da hidroelétrica.
 
-Recapitulando os ultimos capitulos: Tinha trocado o eixo e os rolamentos, mas o parafuso que fixa a roda pelton no eixo precisava de um furo no eixo e eu estava sem minhas brocas.
+Recapitulando os últimos capítulos: Tinha trocado o eixo e os rolamentos, mas o parafuso que fixa a roda pelton no eixo precisava de um furo no eixo e eu estava sem minhas brocas.
 
-Encontrei mninhas brocas e aproveitei o feriado de Natal pra finalizar a instalação e quem sabe usar a energia extra para piscas-piscas!
+Encontrei minhas brocas e aproveitei o feriado de Natal pra finalizar a instalação e quem sabe usar a energia extra para piscas-piscas!
 
 Alguns escorregões descendo a trilha e mãos a obra.
 
@@ -23,10 +23,10 @@ Depois de muita frustração descobri que o parafuso dos antigos rolamentos tinh
 
 Tudo fixo no lugar, hora de testar.
 
-Cano solta, tomo um banho de agua fria, encaixo o cano novamente no lugar e começa a vazar aguá por todo lado, mais de oito pontos de vazamento na conexao, sem pressão suficiente pra gerar a roda.
+Cano solta, tomo um banho de água fria, encaixo o cano novamente no lugar e começa a vazar água por todo lado, mais de oito pontos de vazamento na conexão, sem pressão suficiente pra gerar a roda.
 
 Cansado, molhado e frustrado e a cereja do bolo: começou a chover.
 
-Enfim, não foi dessa vez, sem luzes de Natal esse ano e teremos mais episodeos dessa saga.
+Enfim, não foi dessa vez, sem luzes de Natal esse ano e teremos mais episódios dessa saga.
 
 ![Arrumando a mochila](/img/hidroeletrica/2025-12-25-vazamentos-hidroeletrica.jpg)

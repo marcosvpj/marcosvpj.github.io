@@ -3,18 +3,18 @@ title = "Agora"
 description = "O que estou fazendo agora"
 +++
 
-Esta pagina e inspirada no movimento [/now](https://nownownow.com/about) criado por Derek Sivers.
+Esta página é inspirada no movimento [/now](https://nownownow.com/about) criado por Derek Sivers.
 
 ## Onde estou
 
-Morando off-grid no Sul do Brasil na compania de dois cachorros e um cavalo, trabalhando remotamente para o Bling! na LWSA.
+Morando off-grid no Sul do Brasil na companhia de dois cachorros e um cavalo, trabalhando remotamente para o Bling! na LWSA.
 
 ## Projetos atuais
 
 - Desenvolvendo em Go e PHP no Bling/LWSA
-- Expandindo meu sistema de energia solar (veja os posts sobre [situacao atual](/posts/solar-system-current-state/) e [plano de expansao](/posts/solar-system-expansion/))
+- Expandindo meu sistema de energia solar (veja os posts sobre [situação atual](/posts/solar-system-current-state/) e [plano de expansão](/posts/solar-system-expansion/))
 - Tentando manter este blog
-- Restaurando minha [micro-hidroeletrica](/tags/hidroeletrica)
+- Restaurando minha [micro-hidroelétrica](/tags/hidroeletrica)
 
 ## Com o que estou me divertindo
 
@@ -23,4 +23,4 @@ Morando off-grid no Sul do Brasil na compania de dois cachorros e um cavalo, tra
 
 ---
 
-*Ultima atualizacao: Dezembro 2025*
+*Última atualização: Dezembro 2025*
