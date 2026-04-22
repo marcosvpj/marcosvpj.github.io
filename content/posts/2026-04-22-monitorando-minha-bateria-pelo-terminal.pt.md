@@ -51,4 +51,4 @@ Como desenvolvedor passo grande parte do meu tempo no terminal e assim tenho a i
 
 Apesar de todos os tropeços, foi um final feliz.
 
-E caso tenha curiosidade de ver o código final ou tenha uma bateria do mesmo fabricante e queira fazer algo parecido, o código está disponível no GitHub: [[felicity-battery-api](https://github.com/marcosvpj/felicity-battery-api)](https://github.com/marcosvpj/felicity-battery-api)
+E caso tenha curiosidade de ver o código final ou tenha uma bateria do mesmo fabricante e queira fazer algo parecido, o código está disponível no GitHub: [felicity-battery-api](https://github.com/marcosvpj/felicity-battery-api)
