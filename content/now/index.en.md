@@ -16,6 +16,8 @@ Living off-grid in Southern Brazil in the company of two dogs and a horse, worki
 - Trying to maintain this blog
 - Restoring my [micro-hydroelectric system](/en/tags/hidroeletrica)
 
+{{< solar-widget >}}
+
 ## What I'm having fun with
 
 - Experimenting with board game design

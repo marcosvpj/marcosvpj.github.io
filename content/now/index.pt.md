@@ -16,6 +16,8 @@ Morando off-grid no Sul do Brasil na companhia de dois cachorros e um cavalo, tr
 - Tentando manter este blog
 - Restaurando minha [micro-hidroelétrica](/tags/hidroeletrica)
 
+{{< solar-widget >}}
+
 ## Com o que estou me divertindo
 
 - Experimentando com design de jogos de tabuleiro

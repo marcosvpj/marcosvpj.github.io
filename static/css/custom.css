@@ -137,3 +137,18 @@ article img[alt*="Marcos Pagelkopf"] {
     margin: 0 1em 1em 0;
   }
 }
+
+/* ─── Solar Nav Badge ─── */
+#solar-nav-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85em;
+  vertical-align: middle;
+  font-family: inherit;
+  line-height: 1;
+}
+
+#solar-nav-badge .fas{
+  margin-top: 1px;
+  margin-right: .5em;
+}

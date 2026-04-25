@@ -79,6 +79,11 @@ name = "Sobre"
 url = "/about"
 weight = 6
 
+[[languages.pt.menu.main]]
+name = "Solar"
+url = "/sistema-solar"
+weight = 7
+
 # -----------------------------------------------------------------------------
 # English
 # -----------------------------------------------------------------------------
@@ -120,6 +125,11 @@ weight = 5
 name = "About"
 url = "/about"
 weight = 6
+
+[[languages.en.menu.main]]
+name = "Solar"
+url = "/sistema-solar"
+weight = 7
 
 # =============================================================================
 # PARAMS (shared)
