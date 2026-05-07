@@ -21,6 +21,7 @@ diario:
   - data: 2026-05-03
     foto: "2026-05-03.jpg"
     nota: ""
+
 ---
 
 Pequena árvore originária da América Central e norte da América do Sul. Os frutos são pequenos, vermelhos quando maduros, com uma das mais altas concentrações de vitamina C entre as frutas conhecidas.
