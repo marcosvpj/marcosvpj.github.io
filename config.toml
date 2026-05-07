@@ -65,28 +65,28 @@ url = "/projects"
 weight = 3
 
 [[languages.pt.menu.main]]
+name = "Plantas"
+url = "/plantas"
+weight = 4
+
+[[languages.pt.menu.main]]
 name = "CV"
 url = "/cv"
-weight = 4
+weight = 5
 
 [[languages.pt.menu.main]]
 name = "Agora"
 url = "/now"
-weight = 5
+weight = 6
 
 [[languages.pt.menu.main]]
 name = "Sobre"
 url = "/about"
-weight = 6
+weight = 7
 
 [[languages.pt.menu.main]]
 name = "Solar"
 url = "/sistema-solar"
-weight = 7
-
-[[languages.pt.menu.main]]
-name = "Plantas"
-url = "/plantas"
 weight = 8
 
 # -----------------------------------------------------------------------------
