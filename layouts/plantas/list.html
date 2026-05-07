@@ -1,0 +1,195 @@
+{{ define "main" }}
+<style>
+/* ─── Plantas: list page ─── */
+.plantas-intro {
+  margin-bottom: 2em;
+  line-height: 1.7;
+}
+
+.plantas-intro p {
+  margin-bottom: 0.8em;
+}
+
+.plantas-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5em 0;
+}
+
+.plantas-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  padding: 0.55em 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plantas-item:last-child {
+  border-bottom: none;
+}
+
+.plantas-item-link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.plantas-item-sci {
+  color: #8c8c8c;
+  font-size: 0.85em;
+  font-style: italic;
+  flex: 1;
+}
+
+.plantas-item-loc {
+  color: #8c8c8c;
+  font-size: 0.82em;
+}
+
+.plantas-status {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+
+.plantas-status.viva  { color: #2bbc8a; }
+.plantas-status.morta { color: #e05252; }
+
+/* ─── Calendar ─── */
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 1em;
+  font-size: 0.78em;
+}
+
+.cal-wrap {
+  overflow-x: auto;
+  margin-bottom: 2em;
+}
+
+.cal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82em;
+  white-space: nowrap;
+}
+
+.cal-table th {
+  font-weight: 600;
+  padding: 0.4em 0.8em;
+  border-bottom: 2px solid #e8e8e8;
+  text-align: left;
+  color: #383838;
+}
+
+.cal-table th.plant-th {
+  font-style: italic;
+  font-weight: 400;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.cal-table td {
+  padding: 0.3em 0.8em;
+  border-bottom: 1px solid #f5f5f5;
+  vertical-align: top;
+}
+
+.cal-table td.month-td {
+  font-weight: 600;
+  color: #8c8c8c;
+  font-size: 0.85em;
+  padding-right: 1em;
+}
+
+.act-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em;
+}
+
+.act {
+  display: inline-block;
+  padding: 0.08em 0.4em;
+  border-radius: 2px;
+  font-size: 0.85em;
+}
+
+.act-poda     { background: #e8f5f0; color: #1a7a58; }
+.act-adubacao { background: #fdf6e3; color: #7a5a00; }
+.act-floracao { background: #fce8f3; color: #a0407a; }
+.act-frutos   { background: #e8f0fc; color: #2a5aa0; }
+.act-desbaste { background: #f0e8fc; color: #6a3a9a; }
+</style>
+
+<section id="plantas">
+  <span class="h1">Plantas</span>
+
+  <div class="plantas-intro">
+    {{ .Content }}
+  </div>
+
+  <ul class="plantas-lista">
+    {{ range .Pages }}
+    <li class="plantas-item">
+      <a class="plantas-item-link" href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="plantas-item-sci">{{ .Params.nome_cientifico }}</span>
+      {{ with .Params.localizacao }}<span class="plantas-item-loc">· {{ . }}</span>{{ end }}
+      {{ with .Params.status }}<span class="plantas-status {{ . }}">{{ . }}</span>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+  <span class="h2">Calendário de manutenção</span>
+
+  <div class="cal-legend">
+    <span class="act act-poda">poda</span>
+    <span class="act act-adubacao">adubação</span>
+    <span class="act act-floracao">floração</span>
+    <span class="act act-frutos">frutos</span>
+    <span class="act act-desbaste">desbaste</span>
+  </div>
+
+  <div class="cal-wrap">
+    <table class="cal-table">
+      <thead>
+        <tr>
+          <th>Mês</th>
+          {{ range .Pages }}<th class="plant-th">{{ .Params.nome_popular }}</th>{{ end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{ $pages      := .Pages }}
+        {{ $months     := slice "jan" "fev" "mar" "abr" "mai" "jun" "jul" "ago" "set" "out" "nov" "dez" }}
+        {{ $monthNames := slice "Jan" "Fev" "Mar" "Abr" "Mai" "Jun" "Jul" "Ago" "Set" "Out" "Nov" "Dez" }}
+        {{ range $i, $month := $months }}
+        <tr>
+          <td class="month-td">{{ index $monthNames $i }}</td>
+          {{ range $pages }}
+          {{ $m := .Params.manutencao }}
+          <td>
+            {{ if $m }}
+            {{ $poda := index $m "poda"     }}
+            {{ $adub := index $m "adubacao" }}
+            {{ $flor := index $m "floracao" }}
+            {{ $frut := index $m "frutos"   }}
+            {{ $desb := index $m "desbaste" }}
+            <div class="act-badges">
+              {{ if in $poda  $month }}<span class="act act-poda">poda</span>{{ end }}
+              {{ if in $adub  $month }}<span class="act act-adubacao">adub.</span>{{ end }}
+              {{ if in $flor  $month }}<span class="act act-floracao">flor.</span>{{ end }}
+              {{ if in $frut  $month }}<span class="act act-frutos">frutos</span>{{ end }}
+              {{ if in $desb  $month }}<span class="act act-desbaste">desb.</span>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+          {{ end }}
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</section>
+{{ end }}

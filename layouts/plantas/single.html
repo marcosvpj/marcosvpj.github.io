@@ -1,0 +1,261 @@
+{{ define "main" }}
+<style>
+/* ─── Plantas: single page ─── */
+.planta-back {
+  font-size: 0.85em;
+  color: #2bbc8a;
+  text-decoration: none;
+  border-bottom: 1px solid #2bbc8a;
+  display: inline-block;
+  margin-bottom: 1.8em;
+}
+
+.planta-back:hover { opacity: 0.7; }
+
+.planta-title {
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+.planta-sci {
+  color: #8c8c8c;
+  font-size: 0.95em;
+  margin: 0 0 0.5em;
+}
+
+.planta-wiki {
+  font-size: 0.82em;
+  color: #2bbc8a;
+  text-decoration: none;
+  border-bottom: 1px solid #2bbc8a;
+}
+
+.planta-wiki:hover { opacity: 0.7; }
+
+.planta-status-badge {
+  display: inline-block;
+  font-size: 0.62em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 0.6em;
+}
+
+.planta-status-badge.viva  { color: #2bbc8a; }
+.planta-status-badge.morta { color: #e05252; }
+
+/* meta row */
+.planta-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.8em;
+  margin: 1.2em 0 1.6em;
+  font-size: 0.88em;
+  color: #666;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0.8em 0;
+}
+
+.meta-pair strong {
+  color: #383838;
+  font-weight: 600;
+  margin-right: 0.3em;
+}
+
+/* section labels */
+.planta-label {
+  display: block;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #2bbc8a;
+  margin-bottom: 0.5em;
+}
+
+/* ambiente */
+.ambiente-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 2em;
+  margin-bottom: 1.8em;
+  font-size: 0.88em;
+  color: #666;
+}
+
+.ambiente-pair strong {
+  color: #383838;
+  font-weight: 600;
+  margin-right: 0.3em;
+}
+
+/* content */
+.planta-content {
+  line-height: 1.7;
+  margin-bottom: 2em;
+}
+
+.planta-content p { margin-bottom: 0.9em; }
+
+/* maintenance */
+.manut-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em;
+  font-size: 0.9em;
+}
+
+.manut-item {
+  display: flex;
+  gap: 0.8em;
+  align-items: baseline;
+  padding: 0.35em 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.manut-item:last-child { border-bottom: none; }
+
+.manut-key {
+  font-weight: 600;
+  width: 5.5em;
+  flex-shrink: 0;
+  color: #383838;
+}
+
+.month-tag {
+  display: inline-block;
+  padding: 0.1em 0.45em;
+  border-radius: 2px;
+  background: #f0f0f0;
+  color: #555;
+  margin-right: 0.25em;
+  font-size: 0.88em;
+}
+
+/* ─── Diário ─── */
+.diario-list {
+  margin: 0 0 2em;
+}
+
+.diario-entry {
+  margin-bottom: 2.5em;
+  padding-bottom: 2.5em;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.diario-entry:last-child {
+  border-bottom: none;
+}
+
+.diario-date {
+  display: block;
+  font-size: 0.78em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8c8c8c;
+  margin-bottom: 0.8em;
+}
+
+.diario-foto {
+  margin-bottom: 0.8em;
+}
+
+.diario-foto img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 3px;
+  display: block;
+}
+
+.diario-nota {
+  margin: 0;
+  line-height: 1.7;
+  color: #555;
+  font-size: 0.93em;
+}
+</style>
+
+<article id="planta-single">
+  <a class="planta-back" href="{{ "/plantas/" | relLangURL }}">&larr; todas as plantas</a>
+
+  <h1 class="planta-title">
+    {{ .Title }}
+    {{ with .Params.status }}<span class="planta-status-badge {{ . }}">{{ . }}</span>{{ end }}
+  </h1>
+  <p class="planta-sci"><em>{{ .Params.nome_cientifico }}</em></p>
+  {{ with .Params.wikipedia }}
+  <a class="planta-wiki" href="{{ . }}" target="_blank" rel="noopener">Wikipedia ↗</a>
+  {{ end }}
+
+  {{ $hasLoc    := .Params.localizacao }}
+  {{ $hasData   := .Params.data_plantio }}
+  {{ $hasOrigem := .Params.origem }}
+  {{ if or $hasLoc $hasData $hasOrigem }}
+  <div class="planta-meta">
+    {{ with .Params.localizacao }}<span class="meta-pair"><strong>Localização</strong> {{ . }}</span>{{ end }}
+    {{ with .Params.data_plantio }}<span class="meta-pair"><strong>Plantio</strong> {{ . }}</span>{{ end }}
+    {{ with .Params.origem }}<span class="meta-pair"><strong>Origem</strong> {{ . }}</span>{{ end }}
+  </div>
+  {{ end }}
+
+  {{ $amb := .Params.ambiente }}
+  {{ if $amb }}
+  <span class="planta-label">Ambiente</span>
+  <div class="ambiente-row">
+    {{ with index $amb "solo" }}<span class="ambiente-pair"><strong>Solo</strong> {{ . }}</span>{{ end }}
+    {{ with index $amb "luz"  }}<span class="ambiente-pair"><strong>Luz</strong> {{ . }}</span>{{ end }}
+    {{ with index $amb "agua" }}<span class="ambiente-pair"><strong>Água</strong> {{ . }}</span>{{ end }}
+  </div>
+  {{ end }}
+
+  <div class="planta-content">
+    {{ .Content }}
+  </div>
+
+  {{ $diario := .Params.diario }}
+  {{ if $diario }}
+  <span class="planta-label">Diário</span>
+  <div class="diario-list">
+    {{ range sort $diario "data" "desc" }}
+    {{ $entry := . }}
+    <div class="diario-entry">
+      <time class="diario-date">{{ dateFormat "02 Jan 2006" .data }}</time>
+      {{ with .foto }}
+        {{ $img := $.Resources.GetMatch . }}
+        {{ if $img }}
+        {{ $sized := $img.Resize "900x webp" }}
+        <div class="diario-foto">
+          <img src="{{ $sized.RelPermalink }}" loading="lazy" alt="Foto {{ $entry.data }}">
+        </div>
+        {{ end }}
+      {{ end }}
+      {{ with .nota }}<p class="diario-nota">{{ . }}</p>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ $m := .Params.manutencao }}
+  {{ if $m }}
+  {{ $poda := index $m "poda"     }}
+  {{ $adub := index $m "adubacao" }}
+  {{ $flor := index $m "floracao" }}
+  {{ $frut := index $m "frutos"   }}
+  {{ $desb := index $m "desbaste" }}
+  {{ $hasManut := or $poda $adub $flor $frut $desb }}
+  {{ if $hasManut }}
+  <span class="planta-label">Manutenção</span>
+  <ul class="manut-list">
+    {{ if $poda }}<li class="manut-item"><span class="manut-key">Poda</span><span>{{ range $poda }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $adub }}<li class="manut-item"><span class="manut-key">Adubação</span><span>{{ range $adub }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $flor }}<li class="manut-item"><span class="manut-key">Floração</span><span>{{ range $flor }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $frut }}<li class="manut-item"><span class="manut-key">Frutos</span><span>{{ range $frut }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $desb }}<li class="manut-item"><span class="manut-key">Desbaste</span><span>{{ range $desb }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+  </ul>
+  {{ end }}
+  {{ end }}
+</article>
+{{ end }}
