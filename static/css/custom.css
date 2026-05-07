@@ -58,10 +58,18 @@
   border-top: 1px solid #eee;
 }
 
+/* Nav: reduce item spacing to fit more items on one line */
+#header #nav ul li {
+  margin-right: 8px;
+}
+#header #nav ul a {
+  margin-right: 8px;
+}
+
 /* Theme Toggle Button */
 .theme-toggle {
   margin-left: 0;
-  padding-left: 15px;
+  padding-left: 8px;
 }
 
 .theme-toggle button {
