@@ -46,7 +46,7 @@ Migração de sistema legado em PHP para microserviços em Go.
 ---
 
 ### **Tech Lead - Backend** | Inovally
-*Maio 2023 - Agosto 2024*
+*Maio 2023 - Agosto 2025*
 
 Liderava tecnicamente uma equipe de 6 desenvolvedores na implementação de plataforma de gestão de dívida pública para prefeituras.
 
