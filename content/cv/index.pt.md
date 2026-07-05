@@ -34,14 +34,13 @@ Backend engineer com 7 anos de experiência em Go e forte background em sistemas
 *Novembro 2025 - Hoje*
 
 Migração de sistema legado em PHP para microserviços em Go.
-<!-- Treinamento e mentoria da equipe. -->
 
-<!-- **Principais conquistas:** -->
-<!-- - Treinamentos internos de boas práticas de desenvolvimento e DDD -->
-<!-- - Sistema interno de monitoramento de emissão de notas fiscais, monitorando mais de 2MM de eventos por dia -->
-<!-- - Migração do sistema de emissão de notas para microserviços, possibilitando um aumento de processamento de 1MM para 2MM de registros por dia -->
+**Principais conquistas:**
+- Atuação na migração do módulo fiscal de monólito PHP para microserviços em Go, em ERP que atende 150 mil empresas brasileiras, processando mais de 1.5 milhões de notas fiscais por dia
+- Modelagem de domínio fiscal com DDD, lidando com a complexidade regulatória tributária brasileira (NF-e, NFS-e e reforma tributária)
+- Desenvolvimento de serviços em Go com separação entre domínio e infraestrutura, priorizando testabilidade e facilidade de mudança
 
-**Stack:** Go, PHP, Mysql, Docker, GCP, DDD
+**Stack:** Go, PHP, MySQL, Kafka, Docker, GCP, AWS, DDD
 
 ---
 
@@ -72,7 +71,7 @@ Desenvolvimento e manutenção de bots e pipelines para coleta, tratamento e enr
 - Trabalhei no desenvolvimento de framework interno de scraping acelerando o desenvolvimento de novos bots
 - Co-organizei programa interno de treinamento técnico, lecionando workshop de Docker Compose para 50+ desenvolvedores
 
-**Stack:** Go, Python, Scrapy, PostgreSQL, MongoDB, Docker
+**Stack:** Go, Python, Scrapy, PostgreSQL, MongoDB, RabbitMQ, Docker
 
 ---
 
@@ -96,18 +95,16 @@ Desenvolvimento de sistemas de e-commerce e ERP para clientes enterprise.
 
 ## Experiência Adicional
 
-**PHP & JavaScript (2010-2017):** 8 anos de experiência em desenvolvimento web, incluindo e-commerce, ERPs e sistemas customizados. Também atuei como instrutor de programação web.
+**Ensino & Facilitação**
+
+- Instrutor de desenvolvimento web (PHP, HTML e CSS) em cursos profissionalizantes por ~2 anos, formando turmas de alunos iniciantes
+- Facilitador em programas internos de treinamento técnico na Neoway e Bling, apoiando o desenvolvimento de outros desenvolvedores
 
 ---
 
 ## Educação & Certificações
 
 **Ciência da Computação** - UNIVALI (2006, incompleto)
-**Técnico em Informática** - CAC/UFSC (2004-2006)
-
-**Treinamentos:**
-- Workshop Go (2018)
-- Welcome to Django - Python & Django (2016)
 
 ---
 
