@@ -105,6 +105,7 @@ Desenvolvimento de sistemas de e-commerce e ERP para clientes enterprise.
 ## Educação & Certificações
 
 **Ciência da Computação** - UNIVALI (2006, incompleto)
+**Técnico em Informática** - CAC/UFSC (2004-2006)
 
 ---
 
