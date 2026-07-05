@@ -10,9 +10,9 @@ Curtindo o frio em Benedito Novo no Vale Europeu - Santa Catarina.
 
 <!--more-->
 
-### Thapyoka - Timbo
+### Thapyoka - Timbó
 
-Sobre o Rio Benedito passa a Ponte Thapyoka. Dela e possivel apreciar a beleza da represa que foi construida por imigrantes alemaes no seculo XIX.
+Sobre o Rio Benedito passa a Ponte Thapyoka. Dela é possível apreciar a beleza da represa que foi construída por imigrantes alemães no século XIX.
 
 <div class="row">
 	<a href="/img/toca-do-indio/hi-res/thapyoka-timbo-3.jpg" data-lightbox="thapyoka-timbo-3"><img src="/img/toca-do-indio/thapyoka-timbo-3.jpg" class="photo col" style="width:35.9%; padding: 5px" /></a>
@@ -27,9 +27,9 @@ Sobre o Rio Benedito passa a Ponte Thapyoka. Dela e possivel apreciar a beleza d
 </div>
 
 
-### Toca do Indio - Benedito Novo
+### Toca do Índio - Benedito Novo
 
-Escondido no meio da natureza esta a pousada Toca do Indio. A cerca de 15 km da cidade e possivel esquecer de toda a bagunca da cidade grande.
+Escondido no meio da natureza está a pousada Toca do Índio. A cerca de 15 km da cidade é possível esquecer de toda a bagunça da cidade grande.
 
 <iframe
 style="width:100%; padding:5px"

@@ -58,10 +58,18 @@
   border-top: 1px solid #eee;
 }
 
+/* Nav: reduce item spacing to fit more items on one line */
+#header #nav ul li {
+  margin-right: 8px;
+}
+#header #nav ul a {
+  margin-right: 8px;
+}
+
 /* Theme Toggle Button */
 .theme-toggle {
   margin-left: 0;
-  padding-left: 15px;
+  padding-left: 8px;
 }
 
 .theme-toggle button {
@@ -136,4 +144,19 @@ article img[alt*="Marcos Pagelkopf"] {
     max-width: 75px;
     margin: 0 1em 1em 0;
   }
+}
+
+/* ─── Solar Nav Badge ─── */
+#solar-nav-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85em;
+  vertical-align: middle;
+  font-family: inherit;
+  line-height: 1;
+}
+
+#solar-nav-badge .fas{
+  margin-top: 1px;
+  margin-right: .5em;
 }

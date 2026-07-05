@@ -1,0 +1,231 @@
+{{ define "main" }}
+<style>
+/* ─── Plantas: list page ─── */
+.plantas-intro {
+  margin-bottom: 2em;
+  line-height: 1.7;
+}
+
+.plantas-intro p {
+  margin-bottom: 0.8em;
+}
+
+.plantas-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5em 0;
+}
+
+.plantas-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plantas-item:last-child {
+  border-bottom: none;
+}
+
+.plantas-thumb {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.plantas-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.plantas-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.plantas-item-link {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.plantas-item-sci {
+  display: block;
+  color: #8c8c8c;
+  font-size: 0.82em;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plantas-status {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.plantas-status.viva  { color: #2bbc8a; }
+.plantas-status.morta { color: #e05252; }
+
+/* ─── Calendar ─── */
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 1em;
+  font-size: 0.78em;
+}
+
+.cal-wrap {
+  overflow-x: auto;
+  margin-bottom: 2em;
+}
+
+.cal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82em;
+  white-space: nowrap;
+}
+
+.cal-table th {
+  font-weight: 600;
+  padding: 0.4em 0.8em;
+  border-bottom: 2px solid #e8e8e8;
+  text-align: left;
+  color: #383838;
+}
+
+.cal-table th.plant-th {
+  font-style: italic;
+  font-weight: 400;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.cal-table td {
+  padding: 0.3em 0.8em;
+  border-bottom: 1px solid #f5f5f5;
+  vertical-align: top;
+}
+
+.cal-table td.month-td {
+  font-weight: 600;
+  color: #8c8c8c;
+  font-size: 0.85em;
+  padding-right: 1em;
+}
+
+.act-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em;
+}
+
+.act {
+  display: inline-block;
+  padding: 0.08em 0.4em;
+  border-radius: 2px;
+  font-size: 0.85em;
+}
+
+.act-poda     { background: #e8f5f0; color: #1a7a58; }
+.act-adubacao { background: #fdf6e3; color: #7a5a00; }
+.act-floracao { background: #fce8f3; color: #a0407a; }
+.act-frutos   { background: #e8f0fc; color: #2a5aa0; }
+.act-desbaste { background: #f0e8fc; color: #6a3a9a; }
+</style>
+
+<section id="plantas">
+  <span class="h1">Plantas</span>
+
+  <div class="plantas-intro">
+    {{ .Content }}
+  </div>
+
+  <ul class="plantas-lista">
+    {{ range .Pages }}
+    {{ $p     := . }}
+    {{ $thumb := false }}
+    {{ with .Params.diario }}
+      {{ $sorted     := sort . "data" "desc" }}
+      {{ $latestFoto := index (index $sorted 0) "foto" }}
+      {{ if $latestFoto }}
+        {{ with $p.Resources.GetMatch $latestFoto }}
+          {{ $thumb = .Fill "160x160 webp" }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    <li class="plantas-item">
+      <div class="plantas-thumb">
+        {{ if $thumb }}<img src="{{ $thumb.RelPermalink }}" alt="" loading="lazy">{{ end }}
+      </div>
+      <div class="plantas-item-info">
+        <a class="plantas-item-link" href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+        <span class="plantas-item-sci">{{ $p.Params.nome_cientifico }}</span>
+      </div>
+      {{ with $p.Params.status }}<span class="plantas-status {{ . }}">{{ . }}</span>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+  <span class="h2">Calendário de manutenção</span>
+
+  <div class="cal-legend">
+    <span class="act act-poda">poda</span>
+    <span class="act act-adubacao">adubação</span>
+    <span class="act act-floracao">floração</span>
+    <span class="act act-frutos">frutos</span>
+    <span class="act act-desbaste">desbaste</span>
+  </div>
+
+  <div class="cal-wrap">
+    <table class="cal-table">
+      <thead>
+        <tr>
+          <th>Mês</th>
+          {{ range .Pages }}<th class="plant-th">{{ .Params.nome_popular }}</th>{{ end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{ $pages      := .Pages }}
+        {{ $months     := slice "jan" "fev" "mar" "abr" "mai" "jun" "jul" "ago" "set" "out" "nov" "dez" }}
+        {{ $monthNames := slice "Jan" "Fev" "Mar" "Abr" "Mai" "Jun" "Jul" "Ago" "Set" "Out" "Nov" "Dez" }}
+        {{ range $i, $month := $months }}
+        <tr>
+          <td class="month-td">{{ index $monthNames $i }}</td>
+          {{ range $pages }}
+          {{ $m := .Params.manutencao }}
+          <td>
+            {{ if $m }}
+            {{ $poda := index $m "poda"     }}
+            {{ $adub := index $m "adubacao" }}
+            {{ $flor := index $m "floracao" }}
+            {{ $frut := index $m "frutos"   }}
+            {{ $desb := index $m "desbaste" }}
+            <div class="act-badges">
+              {{ if in $poda  $month }}<span class="act act-poda">poda</span>{{ end }}
+              {{ if in $adub  $month }}<span class="act act-adubacao">adub.</span>{{ end }}
+              {{ if in $flor  $month }}<span class="act act-floracao">flor.</span>{{ end }}
+              {{ if in $frut  $month }}<span class="act act-frutos">frutos</span>{{ end }}
+              {{ if in $desb  $month }}<span class="act act-desbaste">desb.</span>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+          {{ end }}
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</section>
+{{ end }}

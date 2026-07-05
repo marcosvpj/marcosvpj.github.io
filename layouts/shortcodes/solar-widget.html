@@ -1,0 +1,205 @@
+{{ $lang := $.Page.Language.Lang }}
+<style>
+#solar-widget {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 16px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  background: #fafafa;
+}
+#solar-widget .sw-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+#solar-widget .sw-title {
+  color: #8c8c8c;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+#solar-widget .sw-link {
+  color: #2bbc8a;
+  font-size: 11px;
+  text-decoration: none;
+}
+#solar-widget .sw-soc-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+#solar-widget .sw-soc-num {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #383838;
+  letter-spacing: -0.02em;
+}
+#solar-widget .sw-soc-unit {
+  color: #8c8c8c;
+}
+#solar-widget .sw-bar-track {
+  height: 4px;
+  background: #e8e8e8;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+#sw-bar {
+  height: 100%;
+  border-radius: 2px;
+  background: #f0a500;
+  width: 0%;
+  transition: width .4s, background-color .3s;
+}
+#sw-status {
+  color: #2bbc8a;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+#solar-widget .sw-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+@media (max-width: 420px) {
+  #solar-widget .sw-stats { grid-template-columns: repeat(2, 1fr); }
+}
+#solar-widget .sw-stat-label {
+  color: #8c8c8c;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+#solar-widget .sw-stat-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: #383838;
+}
+#solar-widget .sw-stat-unit {
+  color: #8c8c8c;
+  font-size: 10px;
+}
+#sw-updated {
+  color: #bbb;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+body.dark-mode #solar-widget {
+  background: #1a1a1a;
+  border-color: #333;
+}
+body.dark-mode #solar-widget .sw-bar-track { background: #333; }
+body.dark-mode #solar-widget .sw-soc-num,
+body.dark-mode #solar-widget .sw-stat-val  { color: #e8e8e8; }
+body.dark-mode #sw-updated { color: #555; }
+</style>
+
+<div id="solar-widget">
+  <div class="sw-header">
+    <span class="sw-title">{{ if eq $lang "pt" }}Sistema Solar — ao vivo{{ else }}Solar System — live{{ end }}</span>
+    <a class="sw-link" href="/sistema-solar">{{ if eq $lang "pt" }}ver dashboard →{{ else }}dashboard →{{ end }}</a>
+  </div>
+
+  <div class="sw-soc-row">
+    <span id="sw-soc" class="sw-soc-num">–</span>
+    <span class="sw-soc-unit">%</span>
+  </div>
+
+  <div class="sw-bar-track">
+    <div id="sw-bar"></div>
+  </div>
+
+  <div id="sw-status">{{ if eq $lang "pt" }}carregando dados...{{ else }}loading...{{ end }}</div>
+
+  <div class="sw-stats">
+    <div>
+      <div class="sw-stat-label">{{ if eq $lang "pt" }}Tensão{{ else }}Voltage{{ end }}</div>
+      <div><span id="sw-volt" class="sw-stat-val">–</span><span class="sw-stat-unit"> V</span></div>
+    </div>
+    <div>
+      <div class="sw-stat-label">{{ if eq $lang "pt" }}Corrente{{ else }}Current{{ end }}</div>
+      <div><span id="sw-curr" class="sw-stat-val">–</span><span class="sw-stat-unit"> A</span></div>
+    </div>
+    <div>
+      <div class="sw-stat-label">{{ if eq $lang "pt" }}Potência{{ else }}Power{{ end }}</div>
+      <div><span id="sw-power" class="sw-stat-val">–</span><span class="sw-stat-unit"> W</span></div>
+    </div>
+    <div>
+      <div class="sw-stat-label">Temp</div>
+      <div><span id="sw-temp" class="sw-stat-val">–</span><span class="sw-stat-unit"> °C</span></div>
+    </div>
+  </div>
+
+  <div id="sw-updated"></div>
+</div>
+
+<script>
+(function () {
+  var LANG = '{{ $lang }}';
+  var API  = 'https://marcosvpj.xyz/api/status';
+  var REFRESH = 5 * 60 * 1000;
+
+  function fmt(n, decimals) {
+    return typeof n === 'number' ? n.toFixed(decimals) : '–';
+  }
+
+  function statusText(d) {
+    if (d.curr_a > 0.1) {
+      var h = d.hours_to_full;
+      var suffix = h ? ' (~' + Math.round(h) + 'h ' + (LANG === 'pt' ? 'para cheio' : 'to full') + ')' : '';
+      return (LANG === 'pt' ? '↑ Carregando' : '↑ Charging') + suffix;
+    }
+    if (d.curr_a < -0.1) {
+      var hl = d.hours_left;
+      var suf = hl ? ' (~' + Math.round(hl) + 'h ' + (LANG === 'pt' ? 'restantes' : 'left') + ')' : '';
+      return (LANG === 'pt' ? '↓ Descarregando' : '↓ Discharging') + suf;
+    }
+    return LANG === 'pt' ? '· Ocioso' : '· Idle';
+  }
+
+  function barColor(soc) {
+    if (soc <= 20) return '#e05a2b';
+    if (soc <= 40) return '#f0a500';
+    return '#2bbc8a';
+  }
+
+  function render(d) {
+    document.getElementById('sw-soc').textContent = d.soc;
+    var bar = document.getElementById('sw-bar');
+    bar.style.width = d.soc + '%';
+    bar.style.background = barColor(d.soc);
+
+    var statusEl = document.getElementById('sw-status');
+    statusEl.textContent = statusText(d);
+    statusEl.style.color = d.curr_a > 0.1 ? '#2bbc8a' : d.curr_a < -0.1 ? '#f0a500' : '#8c8c8c';
+
+    document.getElementById('sw-volt').textContent  = fmt(d.volt_v, 2);
+    document.getElementById('sw-curr').textContent  = fmt(Math.abs(d.curr_a), 1);
+    document.getElementById('sw-power').textContent = fmt(Math.abs(d.power_w), 0);
+    document.getElementById('sw-temp').textContent  = d.temp_max_c;
+
+    var ts     = new Date(d.ts);
+    var locale = LANG === 'pt' ? 'pt-BR' : 'en-US';
+    var prefix = LANG === 'pt' ? 'última leitura: ' : 'last reading: ';
+    document.getElementById('sw-updated').textContent =
+      prefix + ts.toLocaleString(locale, {day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit'});
+  }
+
+  function load() {
+    fetch(API)
+      .then(function (r) { return r.json(); })
+      .then(render)
+      .catch(function () {
+        var s = document.getElementById('sw-status');
+        if (s) s.textContent = LANG === 'pt' ? 'dados indisponíveis' : 'data unavailable';
+      });
+  }
+
+  load();
+  setInterval(load, REFRESH);
+})();
+</script>

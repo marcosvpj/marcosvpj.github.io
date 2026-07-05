@@ -6,59 +6,59 @@ tags = ["viagens", "fotos", "rally"]
 categories = ["arte"]
 +++
 
-Depois de muita antecipacao e - quase nenhum - planejamento, partimos para Cordoba - Argentina.
+Depois de muita antecipação e - quase nenhum - planejamento, partimos para Córdoba - Argentina.
 
-Com os bolsos cheios de pesos, alguns cartoes de credito e o Google Maps no celular pegamos a estrada. O plano era simples, descer ate Porto Alegre - RS, virar pra direita e seguir ate a placa 'Bienvenidos a Cordoba'.
+Com os bolsos cheios de pesos, alguns cartões de crédito e o Google Maps no celular pegamos a estrada. O plano era simples, descer até Porto Alegre - RS, virar pra direita e seguir até a placa 'Bienvenidos a Córdoba'.
 
-Nao foi bem isso que aconteceu.
+Não foi bem isso que aconteceu.
 
 <!--more-->
 
-### Preparacao
+### Preparação
 
 ![Arrumando a mochila](/img/cordoba/mochila.jpg)
 
-Lanternas, canivete, roupas para o frio, camera fotografica, carregadores e doces!
+Lanternas, canivete, roupas para o frio, câmera fotográfica, carregadores e doces!
 
 Malas prontas, hora de partir.
 
 
 ### O Plano
 
-Muito simples, descer ate Porto Alegre - RS, virar pra direita e seguir ate a placa 'Bienvenidos a Cordoba'.
+Muito simples, descer até Porto Alegre - RS, virar pra direita e seguir até a placa 'Bienvenidos a Córdoba'.
 
-![Rota planejada para Cordoba - Argentina](/img/cordoba/rota-planejada-2.jpg)
+![Rota planejada para Córdoba - Argentina](/img/cordoba/rota-planejada-2.jpg)
 
 1957 km, 22 horas de viagem.
 
-Dividiriamos isso em 3 dias:
-* Primeiro dia - de Balneario Camboriu - SC ate Sao Gabriel - RS
-* Segundo dia - de Sao Gabriel - RS ate Santa Fe - Argentina
-* Terceiro dia - de Santa Fe ate Cordoba.
+Dividiríamos isso em 3 dias:
+* Primeiro dia - de Balneário Camboriú - SC até São Gabriel - RS
+* Segundo dia - de São Gabriel - RS até Santa Fe - Argentina
+* Terceiro dia - de Santa Fe até Córdoba.
 
 
 ### O que realmente aconteceu
 
 >"Nenhum plano de batalha sobrevive ao contato com o inimigo" - Helmuth von Moltke
 
-![Rota realizada para Cordoba - Argentina](/img/cordoba/rota-realizada.png)
+![Rota realizada para Córdoba - Argentina](/img/cordoba/rota-realizada.png)
 
 2204 km, 25 horas de viagem.
 
 Quase 200km a mais de estrada.
 
 Que foram divididos em 3 dias:
-* Primeiro dia - de Balneario Camboriu - SC ate Sao Gabriel - RS
-* Segundo dia - de Sao Gabriel - RS ate Goya - Argentina
-* Terceiro dia - de Goya ate Villa Carlos Paz.
+* Primeiro dia - de Balneário Camboriú - SC até São Gabriel - RS
+* Segundo dia - de São Gabriel - RS até Goya - Argentina
+* Terceiro dia - de Goya até Villa Carlos Paz.
 
-#### Sao Gabriel - Rio Grande do Sul
+#### São Gabriel - Rio Grande do Sul
 
 A primeira parada ocorreu como planejado.
 
-![Sao Gabriel - Rio Grande do Sul](/img/cordoba/sao-gabriel-rs.jpg)
+![São Gabriel - Rio Grande do Sul](/img/cordoba/sao-gabriel-rs.jpg)
 
-Passamos a primeira noite em Sao Gabriel - Rio Grande do Sul.
+Passamos a primeira noite em São Gabriel - Rio Grande do Sul.
 Chegamos ja no final da tarde no [Hotel Sao Luiz](http://www.hsluiz.com.br/site/pt/), fizemos o check-in e fomos comer na Pizzaria da Esquina - e e esse mesmo o nome do lugar, Pizzaria da Esquina.
 
 <div class="row">
@@ -75,16 +75,16 @@ Chegamos ja no final da tarde no [Hotel Sao Luiz](http://www.hsluiz.com.br/site/
 	</div>
 	<div class="col s9">
 		<p>
-			No outro dia aproveitamos para conhecer o museu da FEB - Forca Expedicionaria Brasileira. Ele fica situado numa antiga estacao de trem.
+			No outro dia aproveitamos para conhecer o museu da FEB - Força Expedicionária Brasileira. Ele fica situado numa antiga estação de trem.
 		</p>
 		<p>
-			O pessoal responsavel nos informou que esse e o maior museu da FEB da America do Sul. Ele possui em seu acervo armas, medalhas e reliquias da FEB na Segunda Guerra e tambem pertences pessoais do Marechal Mascarenhas de Morais - comandante da FEB durante a campanha na Italia - entre 1944 e 1945.
+			O pessoal responsável nos informou que esse é o maior museu da FEB da América do Sul. Ele possui em seu acervo armas, medalhas e relíquias da FEB na Segunda Guerra e também pertences pessoais do Marechal Mascarenhas de Morais - comandante da FEB durante a campanha na Itália - entre 1944 e 1945.
 		</p>
 		<p>
-			O museu foi originalmente fundado em Porto Alegre, mas hoje se encontra em Sao Gabriel pois e a cidade natal do Marechal Mascarenhas.
+			O museu foi originalmente fundado em Porto Alegre, mas hoje se encontra em São Gabriel pois é a cidade natal do Marechal Mascarenhas.
 		</p>
 		<p>
-			Infelizmente como o telhado do museu estava sendo trocado, ele estava fechado para visitacao.
+			Infelizmente como o telhado do museu estava sendo trocado, ele estava fechado para visitação.
 		</p>
 	</div>
 </div>
@@ -94,20 +94,20 @@ Chegamos ja no final da tarde no [Hotel Sao Luiz](http://www.hsluiz.com.br/site/
 
 #### Uruguaiana - Brasil / Paso de Los Libres - Argentina
 
-Saindo de Sao Gabriel fomos para Uruguaiana atravesar a fronteira para Argentina.
+Saindo de São Gabriel fomos para Uruguaiana atravessar a fronteira para Argentina.
 
 <div class="row">
 	<img src="/img/cordoba/ponte-fronteira.jpg" alt="Ponte que faz a travessia entre Brasil e Argentina" title="Ponte que faz a travessia entre Brasil e Argentina" class="col s9" style="width: 66.8%;">
 	<img src="/img/cordoba/enfim-argentina.jpg" alt="Enfim chegamos a Argentina" title="Enfim chegamos a Argentina" style="width: 29.6%; margin-left: 10px;">
 </div>
 
-A imigracao foi bem tranquila, apenas apresentar os documentos do carro e de identidade e ganhar a carimbada.
+A imigração foi bem tranquila, apenas apresentar os documentos do carro e de identidade e ganhar a carimbada.
 
 Com tudo em ordem o primeiro objetivo em solo argentino foi encontrar algum lugar para comprar um chip de celular argentino para nos mantermos conectados e poder utilizar o Google Maps.
 
-Depois disso continuamos com nossa rota ate Santa Fe. Foi ai que os planos foram por agua a baixo.
+Depois disso continuamos com nossa rota até Santa Fe. Foi aí que os planos foram por água a baixo.
 
-As chuvas tinham elevado os niveis de varios rios, e por seguranca varias Rutas Nacionales estavam fechadas.
+As chuvas tinham elevado os níveis de vários rios, e por segurança várias Rutas Nacionales estavam fechadas.
 
 
 #### Goya - Argentina
@@ -115,15 +115,15 @@ As chuvas tinham elevado os niveis de varios rios, e por seguranca varias Rutas 
 <div class="row">
 	<div class="col s7">
 		<p>
-			O pessoal do exercito que estava fazendo o bloqueio nos indicou ouutro caminho para Cordoba e pelo mapa que tinhamos pegos no hotel em Sao Gabriel vimos que poderiamos atravessar o rio Parana por Goya.
+			O pessoal do exército que estava fazendo o bloqueio nos indicou outro caminho para Córdoba e pelo mapa que tínhamos pego no hotel em São Gabriel vimos que poderíamos atravessar o rio Paraná por Goya.
 		</p>
 
 		<p>
-			Depois de muita estrada chegamos a Goya. E descobrimos que o mapa estava errado, nao tinha como atravesar o rio por Goya.
+			Depois de muita estrada chegamos a Goya. E descobrimos que o mapa estava errado, não tinha como atravessar o rio por Goya.
 		</p>
 
 		<p>
-			Mas escontramos um casino. Passamos a noite em um baita hotel casino.
+			Mas encontramos um casino. Passamos a noite em um baita hotel casino.
 		</p>
 
 		<p>
@@ -141,11 +141,11 @@ As chuvas tinham elevado os niveis de varios rios, e por seguranca varias Rutas 
 	<img src="/img/cordoba/goya-campo.jpg" class="col s4" style="padding: 5px" />
 </div>
 
-Mais alguns - muitos - quilometros ate voltarmos a nossa rota. Atravesar o rio em Parana para Santa Fe e chegar em Cordoba.
+Mais alguns - muitos - quilômetros até voltarmos a nossa rota. Atravessar o rio em Paraná para Santa Fe e chegar em Córdoba.
 
-Quilometros, quilometros e mais quilometros de asfalto, pastos e fazendas.
+Quilômetros, quilômetros e mais quilômetros de asfalto, pastos e fazendas.
 
-E tambem algumas blitz. Fomos parados umas 4 vezes no mesmo dia.
+E também algumas blitz. Fomos parados umas 4 vezes no mesmo dia.
 
 <div class="row">
 	<img src="/img/cordoba/goya-gaucho-1.jpg" class="col s4" style="padding: 5px" />
@@ -161,10 +161,10 @@ E tambem algumas blitz. Fomos parados umas 4 vezes no mesmo dia.
 	</div>
 	<div class="col s7">
 		<p>
-			Chegando em Parana descobrimos que tambem nao havia uma ponte, e sim varias e tambem um tunel.
+			Chegando em Paraná descobrimos que também não havia uma ponte, e sim várias e também um túnel.
 		</p>
 		<p>
-			Como haviamos passado a noite em Goya decidimos partir direto para Cordoba e nao dormir em Santa Fe.
+			Como havíamos passado a noite em Goya decidimos partir direto para Córdoba e não dormir em Santa Fe.
 		</p>
 	</div>
 </div>
@@ -180,15 +180,15 @@ E tambem algumas blitz. Fomos parados umas 4 vezes no mesmo dia.
 
 
 
-#### Cordoba
+#### Córdoba
 
 <div class="row">
 	<img src="/img/cordoba/cordoba.jpg" class="col s6" style="padding: 5px" />
 	<img src="/img/cordoba/cordoba-por-do-sol.jpg" class="col s6" style="padding: 5px" />
 </div>
 
-Enfim Cordoba!
-So que nao, no decorrer da viagem decidimos nos hospedar em Carlos Paz e nao Cordoba. Mais uns 50 quilometros.
+Enfim Córdoba!
+Só que não, no decorrer da viagem decidimos nos hospedar em Carlos Paz e não Córdoba. Mais uns 50 quilômetros.
 
 
 #### Villa Carlos Paz
@@ -199,16 +199,16 @@ So que nao, no decorrer da viagem decidimos nos hospedar em Carlos Paz e nao Cor
 	</div>
 	<div class="col s9">
 		<p>
-			Paramos em um posto de combustivel para achar o endereco de algum hotel em Carlos Paz e encontramos o encantador Hotel Temu.
+			Paramos em um posto de combustível para achar o endereço de algum hotel em Carlos Paz e encontramos o encantador Hotel Temu.
 		</p>
 		<p>
-			Chegando no hotel descobrimos que os quartos nao eram tao encantadores assim. Mas o que o hotel pecou na infraestrutura ele me ganhou no atendimento. O melhor e mais engracado recepcionista que ja encontrei.
+			Chegando no hotel descobrimos que os quartos não eram tão encantadores assim. Mas o que o hotel pecou na infraestrutura ele me ganhou no atendimento. O melhor e mais engraçado recepcionista que já encontrei.
 		</p>
 		<p>
-			Villa Carlos Paz, que lugar bacana. Um dos maiores destinos turisticos dos argentinos. A quantidade de hoteis lembrou Balneario Camboriu.
+			Villa Carlos Paz, que lugar bacana. Um dos maiores destinos turísticos dos argentinos. A quantidade de hotéis lembrou Balneário Camboriú.
 		</p>
 		<p>
-			Possui um imenso lago, rodeado por um gramado para a galera aproveitar. E nos seus arredores tambem existem varias outras pequenas villas, uma mais charmosa que a outra.
+			Possui um imenso lago, rodeado por um gramado para a galera aproveitar. E nos seus arredores também existem várias outras pequenas villas, uma mais charmosa que a outra.
 		</p>
 	</div>
 </div>
@@ -224,13 +224,13 @@ So que nao, no decorrer da viagem decidimos nos hospedar em Carlos Paz e nao Cor
 <div class="row">
 	<div class="col s6">
 		<p>
-			O rally teve varias provas, mas so conseguimos acompanhar de perto apenas duas delas.
+			O rally teve várias provas, mas só conseguimos acompanhar de perto apenas duas delas.
 		</p>
 		<p>
-			Havia um grande esquema de seguranca por tras das provas, as estradas eram fechadas bem cedo para garantir a seguranca dos competidores e espectadores.
+			Havia um grande esquema de segurança por trás das provas, as estradas eram fechadas bem cedo para garantir a segurança dos competidores e espectadores.
 		</p>
 		<p>
-			Para podermos assistr as provas deviamos estar bem cedo nos locais determinados ou nada feito.
+			Para podermos assistir as provas devíamos estar bem cedo nos locais determinados ou nada feito.
 		</p>
 	</div>
 	<div class="col s6 photo">

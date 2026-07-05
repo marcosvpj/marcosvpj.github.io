@@ -1,0 +1,298 @@
+{{ define "main" }}
+<style>
+/* ─── Plant single page ─── */
+
+.planta-back {
+  font-size: 0.85em;
+  color: #2bbc8a;
+  text-decoration: none;
+  border-bottom: 1px solid #2bbc8a;
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+.planta-back:hover { opacity: 0.7; }
+
+.planta-title { line-height: 1.3; }
+
+.planta-sci-inline {
+  font-style: italic;
+  font-weight: 400;
+  color: #8c8c8c;
+  font-size: 0.65em;
+}
+
+.planta-status-badge {
+  display: inline-block;
+  font-size: 0.52em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+.planta-status-badge.viva  { color: #2bbc8a; }
+.planta-status-badge.morta { color: #e05252; }
+
+/* ─── Hero two-column ─── */
+.planta-hero {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2em;
+  align-items: start;
+  margin: 0 0 2.5em;
+}
+.planta-hero--nofoto { grid-template-columns: 1fr; }
+
+.planta-hero-foto img {
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+}
+
+/* ─── Right column info ─── */
+.planta-meta-item {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0 0 0.25em;
+  line-height: 1.5;
+}
+.planta-meta-item strong {
+  color: #383838;
+  font-weight: 600;
+}
+
+.planta-content {
+  margin-top: 1em;
+  line-height: 1.7;
+}
+.planta-content p { margin-bottom: 0.9em; }
+
+.planta-wiki {
+  display: inline-block;
+  font-size: 0.85em;
+  color: #2bbc8a;
+  text-decoration: none;
+  border-bottom: 1px solid #2bbc8a;
+}
+.planta-wiki:hover { opacity: 0.7; }
+
+/* ─── Diary ─── */
+.diario-list { margin: 0.5em 0 2em; }
+
+.diario-entry {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.2em;
+  align-items: start;
+  padding: 1em 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.diario-entry:last-child { border-bottom: none; }
+
+.diario-thumb img {
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.diario-thumb img:hover { opacity: 0.85; }
+
+/* ─── Lightbox ─── */
+#planta-lb {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#planta-lb.open { display: flex; }
+#planta-lb img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 3px;
+  cursor: default;
+}
+
+.diario-date {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8c8c8c;
+  margin-bottom: 0.3em;
+}
+
+.diario-nota {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ─── Maintenance ─── */
+.manut-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em;
+  font-size: 0.9em;
+}
+.manut-item {
+  display: flex;
+  gap: 0.8em;
+  align-items: baseline;
+  padding: 0.35em 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.manut-item:last-child { border-bottom: none; }
+.manut-key {
+  font-weight: 600;
+  width: 5.5em;
+  flex-shrink: 0;
+  color: #383838;
+}
+.month-tag {
+  display: inline-block;
+  padding: 0.1em 0.45em;
+  border-radius: 2px;
+  background: #f0f0f0;
+  color: #555;
+  margin-right: 0.25em;
+  font-size: 0.88em;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .planta-hero { grid-template-columns: 1fr; }
+  .diario-entry { grid-template-columns: 72px 1fr; }
+}
+</style>
+
+<article id="planta-single">
+  <a class="planta-back" href="{{ "/plantas/" | relLangURL }}">&larr; todas as plantas</a>
+
+  <h1 class="planta-title">
+    {{ if eq .Params.status "morta" }}☠️{{ else }}🌱{{ end }} {{ .Title }}
+    <span class="planta-sci-inline">({{ .Params.nome_cientifico }})</span>
+    {{ with .Params.status }}<span class="planta-status-badge {{ . }}">{{ . }}</span>{{ end }}
+  </h1>
+
+  {{/* Resolve the latest diary photo for the hero */}}
+  {{ $heroImg := false }}
+  {{ with .Params.diario }}
+    {{ $sorted   := sort . "data" "desc" }}
+    {{ $latestFoto := index (index $sorted 0) "foto" }}
+    {{ if $latestFoto }}
+      {{ with $.Resources.GetMatch $latestFoto }}
+        {{ $heroImg = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <div class="planta-hero{{ if not $heroImg }} planta-hero--nofoto{{ end }}">
+
+    {{ if $heroImg }}
+    {{ $sized := $heroImg.Resize "900x webp" }}
+    <div class="planta-hero-foto">
+      <img src="{{ $sized.RelPermalink }}" alt="{{ .Title }}" loading="eager">
+    </div>
+    {{ end }}
+
+    <div class="planta-hero-info">
+      {{ with .Params.localizacao }}<p class="planta-meta-item"><strong>Localização:</strong> {{ . }}</p>{{ end }}
+      {{ $amb := .Params.ambiente }}
+      {{ if $amb }}
+        {{ with index $amb "solo" }}<p class="planta-meta-item"><strong>Solo:</strong> {{ . }}</p>{{ end }}
+        {{ with index $amb "luz"  }}<p class="planta-meta-item"><strong>Luz:</strong> {{ . }}</p>{{ end }}
+        {{ with index $amb "agua" }}<p class="planta-meta-item"><strong>Água:</strong> {{ . }}</p>{{ end }}
+      {{ end }}
+      <div class="planta-content">{{ .Content }}</div>
+      {{ with .Params.wikipedia }}
+      <a class="planta-wiki" href="{{ . }}" target="_blank" rel="noopener">Wikipedia ↗</a>
+      {{ end }}
+    </div>
+
+  </div>
+
+  {{/* Diary log */}}
+  {{ with .Params.diario }}
+  <span class="h2">Diário</span>
+  <div class="diario-list">
+    {{ range sort . "data" "desc" }}
+    <div class="diario-entry">
+      {{ with .foto }}
+        {{ with $.Resources.GetMatch . }}
+        {{ $thumb := .Fill "360x360 webp" }}
+        {{ $large := .Resize "1400x webp" }}
+        <div class="diario-thumb">
+          <img src="{{ $thumb.RelPermalink }}" loading="lazy" alt=""
+               data-large="{{ $large.RelPermalink }}">
+        </div>
+        {{ end }}
+      {{ end }}
+      <div class="diario-text">
+        <time class="diario-date">{{ dateFormat "02/01/2006" .data }}</time>
+        {{ with .nota }}<p class="diario-nota">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* Maintenance schedule */}}
+  {{ $m := .Params.manutencao }}
+  {{ if $m }}
+  {{ $poda := index $m "poda"     }}
+  {{ $adub := index $m "adubacao" }}
+  {{ $flor := index $m "floracao" }}
+  {{ $frut := index $m "frutos"   }}
+  {{ $desb := index $m "desbaste" }}
+  {{ if or $poda $adub $flor $frut $desb }}
+  <span class="h2">Manutenção</span>
+  <ul class="manut-list">
+    {{ if $poda }}<li class="manut-item"><span class="manut-key">Poda</span><span>{{ range $poda }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $adub }}<li class="manut-item"><span class="manut-key">Adubação</span><span>{{ range $adub }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $flor }}<li class="manut-item"><span class="manut-key">Floração</span><span>{{ range $flor }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $frut }}<li class="manut-item"><span class="manut-key">Frutos</span><span>{{ range $frut }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+    {{ if $desb }}<li class="manut-item"><span class="manut-key">Desbaste</span><span>{{ range $desb }}<span class="month-tag">{{ . }}</span>{{ end }}</span></li>{{ end }}
+  </ul>
+  {{ end }}
+  {{ end }}
+
+</article>
+
+<div id="planta-lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <img src="" alt="">
+</div>
+
+<script>
+(function () {
+  var lb    = document.getElementById('planta-lb');
+  var lbImg = lb.querySelector('img');
+
+  document.querySelectorAll('.diario-thumb img[data-large]').forEach(function (thumb) {
+    thumb.addEventListener('click', function () {
+      lbImg.src = this.dataset.large;
+      lb.classList.add('open');
+    });
+  });
+
+  lb.addEventListener('click', function () {
+    lb.classList.remove('open');
+    lbImg.src = '';
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      lb.classList.remove('open');
+      lbImg.src = '';
+    }
+  });
+})();
+</script>
+{{ end }}

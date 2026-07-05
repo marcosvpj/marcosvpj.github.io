@@ -1,0 +1,692 @@
+{{ define "main" }}
+<style>
+/* ─── Dashboard: namespace .dash- to avoid theme conflicts ─── */
+
+.dash-section-title {
+  color: #2bbc8a;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin: 0 0 0.25em 0;
+  letter-spacing: -0.01em;
+}
+
+.dash-subtitle {
+  color: #8c8c8c;
+  font-size: 0.78em;
+  margin: 0 0 1.8em 0;
+}
+
+/* ─── Status banner ─── */
+.dash-banner {
+  padding: 0.55em 0.9em;
+  border-radius: 3px;
+  font-size: 0.82em;
+  margin-bottom: 1.4em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.dash-banner.ok     { background: #edf7f3; color: #1a7a58; border-left: 3px solid #2bbc8a; }
+.dash-banner.warn   { background: #fdf6e3; color: #7a5a00; border-left: 3px solid #f0a500; }
+.dash-banner.error  { background: #fdeaea; color: #7a1f1f; border-left: 3px solid #e05252; }
+.dash-banner.hidden { display: none; }
+
+/* ─── Battery main card ─── */
+.dash-battery-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 1.4em 1.6em;
+  margin-bottom: 1.2em;
+  background: #fafafa;
+}
+.dash-soc-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3em;
+  margin-bottom: 0.7em;
+}
+.dash-soc-number {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+  color: #383838;
+  letter-spacing: -0.03em;
+}
+.dash-soc-pct {
+  font-size: 1.1em;
+  color: #8c8c8c;
+}
+.dash-soc-track {
+  width: 100%;
+  height: 8px;
+  background: #e8e8e8;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.9em;
+}
+.dash-soc-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease, background-color 0.4s ease;
+  width: 0%;
+  background: #2bbc8a;
+}
+.dash-soc-fill.warn   { background: #f0a500; }
+.dash-soc-fill.critical { background: #e05252; }
+
+.dash-battery-meta {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  font-size: 0.88em;
+  color: #383838;
+}
+.dash-direction {
+  font-weight: 700;
+}
+.dash-direction.charging    { color: #2bbc8a; }
+.dash-direction.discharging { color: #383838; }
+.dash-direction.idle        { color: #8c8c8c; }
+.dash-time-left {
+  color: #8c8c8c;
+}
+
+/* ─── Stats grid ─── */
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8em;
+  margin-bottom: 1.6em;
+}
+@media (min-width: 480px) {
+  .dash-stats-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.dash-stat {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 0.9em 1em;
+  background: #fafafa;
+}
+.dash-stat-label {
+  font-size: 0.72em;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3em;
+}
+.dash-stat-value {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #383838;
+  letter-spacing: -0.01em;
+}
+.dash-stat-unit {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #8c8c8c;
+}
+
+/* ─── Charts ─── */
+.dash-chart-section {
+  margin-bottom: 1.6em;
+}
+.dash-chart-label {
+  font-size: 0.72em;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5em;
+}
+.dash-chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fafafa;
+}
+.dash-chart-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.dash-chart-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68em;
+  color: #8c8c8c;
+  margin-top: 0.2em;
+}
+
+/* ─── Cell grid ─── */
+.dash-cells-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+}
+@media (min-width: 400px) {
+  .dash-cells-grid { grid-template-columns: repeat(8, 1fr); }
+}
+.dash-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+}
+.dash-cell-bar-track {
+  width: 100%;
+  height: 40px;
+  background: #e8e8e8;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.dash-cell-bar-fill {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.5s ease, background-color 0.3s ease;
+  background: #2bbc8a;
+}
+.dash-cell-bar-fill.warn     { background: #f0a500; }
+.dash-cell-bar-fill.critical { background: #e05252; }
+.dash-cell-value {
+  font-size: 0.65em;
+  color: #8c8c8c;
+  text-align: center;
+}
+.dash-cell-index {
+  font-size: 0.62em;
+  color: #c0c0c0;
+}
+
+/* ─── Footer ─── */
+.dash-footer {
+  font-size: 0.72em;
+  color: #8c8c8c;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+/* ─── Skeleton / loading state ─── */
+.dash-skeleton {
+  display: inline-block;
+  width: 4em;
+  height: 0.9em;
+  background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: dash-shimmer 1.4s infinite;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+@keyframes dash-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Dark mode ─── */
+body.dark-mode .dash-battery-card,
+body.dark-mode .dash-stat,
+body.dark-mode .dash-chart-wrapper {
+  background: #1a1a1a;
+  border-color: #333;
+}
+body.dark-mode .dash-soc-track   { background: #333; }
+body.dark-mode .dash-cell-bar-track { background: #333; }
+body.dark-mode .dash-soc-number,
+body.dark-mode .dash-stat-value  { color: #e8e8e8; }
+body.dark-mode .dash-banner.ok   { background: #0d2e22; color: #4fd4a5; }
+body.dark-mode .dash-banner.warn { background: #2a2000; color: #f0c040; }
+body.dark-mode .dash-banner.error{ background: #2a0a0a; color: #f08080; }
+</style>
+
+<article class="post">
+  <div class="content">
+
+    <h1 class="dash-section-title">Sistema Solar</h1>
+    <p class="dash-subtitle">Bateria LiFePO4 · 24V 171Ah · atualiza a cada 5 min</p>
+
+    <div id="dash-banner" class="dash-banner hidden"></div>
+
+    <!-- SOC + direction -->
+    <div class="dash-battery-card">
+      <div class="dash-soc-row">
+        <span id="soc-value" class="dash-soc-number">--</span>
+        <span class="dash-soc-pct">%</span>
+      </div>
+      <div class="dash-soc-track">
+        <div id="soc-fill" class="dash-soc-fill"></div>
+      </div>
+      <div class="dash-battery-meta">
+        <span id="direction" class="dash-direction">--</span>
+        <span id="time-left" class="dash-time-left"></span>
+      </div>
+    </div>
+
+    <!-- Stat cards -->
+    <div class="dash-stats-grid">
+      <div class="dash-stat">
+        <div class="dash-stat-label">Tensão</div>
+        <div class="dash-stat-value" id="stat-volt">--<span class="dash-stat-unit"> V</span></div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-label">Corrente</div>
+        <div class="dash-stat-value" id="stat-curr">--<span class="dash-stat-unit"> A</span></div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-label">Potência</div>
+        <div class="dash-stat-value" id="stat-power">--<span class="dash-stat-unit"> W</span></div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-label">Temperatura</div>
+        <div class="dash-stat-value" id="stat-temp">--<span class="dash-stat-unit"> °C</span></div>
+      </div>
+    </div>
+
+    <!-- SOC history -->
+    <div class="dash-chart-section">
+      <div class="dash-chart-label">SOC — últimas 24h</div>
+      <div class="dash-chart-wrapper">
+        <svg id="chart-soc" viewBox="0 0 600 72" preserveAspectRatio="none"></svg>
+      </div>
+      <div class="dash-chart-range">
+        <span id="chart-soc-start">--</span>
+        <span id="chart-soc-end">agora</span>
+      </div>
+    </div>
+
+    <!-- Power history -->
+    <div class="dash-chart-section">
+      <div class="dash-chart-label">Potência — últimas 24h</div>
+      <div class="dash-chart-wrapper">
+        <svg id="chart-power" viewBox="0 0 600 72" preserveAspectRatio="none"></svg>
+      </div>
+      <div class="dash-chart-range">
+        <span id="chart-power-min">--</span>
+        <span id="chart-power-max">--</span>
+      </div>
+    </div>
+
+    <!-- Cell voltages -->
+    <div class="dash-chart-section">
+      <div class="dash-chart-label">Células (mV)</div>
+      <div id="cells-grid" class="dash-cells-grid"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="dash-footer">
+      <span>Última leitura: <span id="last-ts">--</span></span>
+      <span>Próxima: <span id="countdown">5:00</span></span>
+    </div>
+
+  </div>
+</article>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// Configure your API base URL here.
+//
+// IMPORTANT: The blog is served over HTTPS. Browsers block HTTP requests from
+// HTTPS pages (mixed content). Before this dashboard can fetch live data, your
+// VPS API must be available over HTTPS — set up an nginx reverse proxy with
+// Let's Encrypt, or use a Cloudflare Tunnel.
+// ─────────────────────────────────────────────────────────────────────────────
+const API_BASE = 'https://marcosvpj.xyz';
+
+const REFRESH_MS = 5 * 60 * 1000; // 5 min — matches battery poll interval
+
+// ─── DOM refs ────────────────────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const banner    = $('dash-banner');
+const socValue  = $('soc-value');
+const socFill   = $('soc-fill');
+const direction = $('direction');
+const timeLeft  = $('time-left');
+const statVolt  = $('stat-volt');
+const statCurr  = $('stat-curr');
+const statPower = $('stat-power');
+const statTemp  = $('stat-temp');
+const lastTs    = $('last-ts');
+const countdown = $('countdown');
+const cellsGrid = $('cells-grid');
+const chartSoc   = $('chart-soc');
+const chartPower = $('chart-power');
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+function fmt(n, decimals = 1) {
+  return n == null ? '--' : Number(n).toFixed(decimals);
+}
+
+function fmtDuration(hours) {
+  if (hours == null || !isFinite(hours)) return '';
+  const h = Math.floor(hours);
+  const m = Math.round((hours - h) * 60);
+  if (h === 0) return `${m}min`;
+  return m > 0 ? `${h}h ${m}min` : `${h}h`;
+}
+
+function fmtTs(isoStr) {
+  const d = new Date(isoStr);
+  return d.toLocaleString('pt-BR', {
+    day: '2-digit', month: '2-digit',
+    hour: '2-digit', minute: '2-digit'
+  });
+}
+
+function fmtTime(isoStr) {
+  const d = new Date(isoStr);
+  return d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+}
+
+function socClass(soc) {
+  if (soc < 20)  return 'critical';
+  if (soc < 50)  return 'warn';
+  return '';
+}
+
+function cellClass(mv) {
+  if (mv < 3000) return 'critical';
+  if (mv < 3200) return 'warn';
+  return '';
+}
+
+function showBanner(type, msg) {
+  banner.className = `dash-banner ${type}`;
+  banner.textContent = msg;
+}
+
+function hideBanner() {
+  banner.className = 'dash-banner hidden';
+}
+
+// ─── Render current reading ───────────────────────────────────────────────────
+function renderStatus(r) {
+  // SOC
+  const soc = r.soc;
+  socValue.textContent = fmt(soc, 0);
+  socFill.style.width = `${Math.max(0, Math.min(100, soc))}%`;
+  socFill.className = `dash-soc-fill ${socClass(soc)}`;
+
+  // Direction + time remaining
+  const curr = r.curr_a;
+  let dirLabel, dirCls, timeStr = '';
+
+  if (Math.abs(curr) < 0.3) {
+    dirLabel = '◦ Idle';
+    dirCls = 'idle';
+  } else if (curr < 0) {
+    dirLabel = '↓ Descarregando';
+    dirCls = 'discharging';
+    const remainAh = (soc / 100) * r.capacity_ah;
+    const hours = remainAh / Math.abs(curr);
+    timeStr = `~${fmtDuration(hours)} restantes`;
+  } else {
+    dirLabel = '↑ Carregando';
+    dirCls = 'charging';
+    const chargeAh = ((100 - soc) / 100) * r.capacity_ah;
+    const hours = chargeAh / curr;
+    timeStr = `~${fmtDuration(hours)} para cheio`;
+  }
+
+  direction.textContent = dirLabel;
+  direction.className = `dash-direction ${dirCls}`;
+  timeLeft.textContent = timeStr;
+
+  // Stat cards
+  statVolt.innerHTML  = `${fmt(r.volt_v, 2)}<span class="dash-stat-unit"> V</span>`;
+  statCurr.innerHTML  = `${fmt(r.curr_a, 1)}<span class="dash-stat-unit"> A</span>`;
+  statPower.innerHTML = `${fmt(r.power_w, 0)}<span class="dash-stat-unit"> W</span>`;
+  statTemp.innerHTML  = `${fmt(r.temp_max_c, 0)}<span class="dash-stat-unit"> °C</span>`;
+
+  // Last timestamp
+  lastTs.textContent = fmtTs(r.ts);
+
+  // BMS status banner
+  if (r.status && r.status !== 'NM' && r.status !== '') {
+    showBanner('warn', `BMS: ${r.status}`);
+  } else if (soc < 20) {
+    showBanner('warn', `Bateria baixa — ${fmt(soc, 0)}% de carga`);
+  } else {
+    hideBanner();
+  }
+
+  // Cell bars
+  renderCells(r.cell_volts_mv);
+}
+
+// ─── Render cell bars ─────────────────────────────────────────────────────────
+function renderCells(cells) {
+  if (!cells || !cells.length) return;
+  const minMv = 3000, maxMv = 3400;
+  cellsGrid.innerHTML = '';
+  cells.forEach((mv, i) => {
+    const pct = Math.max(0, Math.min(100,
+      ((mv - minMv) / (maxMv - minMv)) * 100
+    ));
+    const cls = cellClass(mv);
+    cellsGrid.innerHTML += `
+      <div class="dash-cell">
+        <div class="dash-cell-bar-track">
+          <div class="dash-cell-bar-fill ${cls}" style="height:${pct}%"></div>
+        </div>
+        <div class="dash-cell-value">${mv}</div>
+        <div class="dash-cell-index">${i + 1}</div>
+      </div>`;
+  });
+}
+
+// ─── SVG sparkline ────────────────────────────────────────────────────────────
+const W = 600, H = 72, PAD = 4;
+
+function makeLine(points, color, strokeWidth = 1.5) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+  el.setAttribute('points', points);
+  el.setAttribute('fill', 'none');
+  el.setAttribute('stroke', color);
+  el.setAttribute('stroke-width', strokeWidth);
+  el.setAttribute('stroke-linejoin', 'round');
+  el.setAttribute('stroke-linecap', 'round');
+  return el;
+}
+
+function makeArea(points, firstX, lastX, baseY, color) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+  el.setAttribute('points', `${firstX},${baseY} ${points} ${lastX},${baseY}`);
+  el.setAttribute('fill', color);
+  el.setAttribute('opacity', '0.12');
+  return el;
+}
+
+function makeHLine(y, color, dasharray) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  el.setAttribute('x1', PAD); el.setAttribute('x2', W - PAD);
+  el.setAttribute('y1', y);   el.setAttribute('y2', y);
+  el.setAttribute('stroke', color);
+  el.setAttribute('stroke-width', '0.8');
+  if (dasharray) el.setAttribute('stroke-dasharray', dasharray);
+  return el;
+}
+
+function dataToSvg(values, yMin, yMax) {
+  const n = values.length;
+  if (n < 2) return '';
+  const chartH = H - PAD * 2;
+  const chartW = W - PAD * 2;
+  return values.map((v, i) => {
+    const x = PAD + (i / (n - 1)) * chartW;
+    const y = PAD + (1 - (v - yMin) / (yMax - yMin)) * chartH;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+}
+
+function yToSvg(val, yMin, yMax) {
+  const chartH = H - PAD * 2;
+  return PAD + (1 - (val - yMin) / (yMax - yMin)) * chartH;
+}
+
+function renderChart(svgEl, records, field, opts = {}) {
+  svgEl.innerHTML = '';
+  if (!records || records.length < 2) return;
+
+  const values = records.map(r => r[field]);
+  const dataMin = Math.min(...values);
+  const dataMax = Math.max(...values);
+
+  // Expand range so the line doesn't hug the edges
+  const pad = (dataMax - dataMin) * 0.1 || 1;
+  const yMin = opts.fixedMin != null ? opts.fixedMin : dataMin - pad;
+  const yMax = opts.fixedMax != null ? opts.fixedMax : dataMax + pad;
+
+  const ns = 'http://www.w3.org/2000/svg';
+
+  // Background
+  const bg = document.createElementNS(ns, 'rect');
+  bg.setAttribute('width', W); bg.setAttribute('height', H);
+  bg.setAttribute('fill', 'transparent');
+  svgEl.appendChild(bg);
+
+  // Optional threshold lines
+  if (opts.thresholds) {
+    opts.thresholds.forEach(({ val, color, dash }) => {
+      if (val >= yMin && val <= yMax) {
+        svgEl.appendChild(makeHLine(yToSvg(val, yMin, yMax), color, dash || '4 3'));
+      }
+    });
+  }
+
+  // Zero line for power chart
+  if (opts.zeroLine && 0 >= yMin && 0 <= yMax) {
+    svgEl.appendChild(makeHLine(yToSvg(0, yMin, yMax), '#c0c0c0', null));
+  }
+
+  const pts = dataToSvg(values, yMin, yMax);
+  const firstX = PAD;
+  const lastX  = W - PAD;
+  const baseY  = field === 'power_w'
+    ? yToSvg(0, yMin, yMax)
+    : H - PAD;
+
+  // Area fill
+  svgEl.appendChild(makeArea(pts, firstX, lastX, baseY, opts.color || '#2bbc8a'));
+
+  // Line
+  svgEl.appendChild(makeLine(pts, opts.color || '#2bbc8a'));
+
+  return { dataMin, dataMax };
+}
+
+// ─── Render history charts ────────────────────────────────────────────────────
+function renderHistory(records) {
+  if (!records || records.length < 2) return;
+
+  // Oldest first for left→right rendering
+  const sorted = [...records].sort((a, b) => new Date(a.ts) - new Date(b.ts));
+
+  // SOC chart
+  renderChart(chartSoc, sorted, 'soc', {
+    fixedMin: 0,
+    fixedMax: 100,
+    color: '#2bbc8a',
+    thresholds: [
+      { val: 50, color: '#c0c0c0' },
+      { val: 20, color: '#f0a500' },
+    ]
+  });
+
+  const startLabel = $('chart-soc-start');
+  const endLabel   = $('chart-soc-end');
+  if (startLabel) startLabel.textContent = fmtTime(sorted[0].ts);
+  if (endLabel)   endLabel.textContent   = 'agora';
+
+  // Power chart
+  const powerStats = renderChart(chartPower, sorted, 'power_w', {
+    color: '#5b9cf6',
+    zeroLine: true
+  });
+
+  if (powerStats) {
+    const minEl = $('chart-power-min');
+    const maxEl = $('chart-power-max');
+    if (minEl) minEl.textContent = `${fmt(powerStats.dataMin, 0)} W`;
+    if (maxEl) maxEl.textContent = `${fmt(powerStats.dataMax, 0)} W`;
+  }
+}
+
+// ─── Fetch & refresh loop ─────────────────────────────────────────────────────
+let countdownSec = REFRESH_MS / 1000;
+let countdownTimer = null;
+
+function startCountdown() {
+  clearInterval(countdownTimer);
+  countdownSec = REFRESH_MS / 1000;
+  countdownTimer = setInterval(() => {
+    countdownSec--;
+    if (countdownSec <= 0) {
+      clearInterval(countdownTimer);
+      fetchAll();
+      return;
+    }
+    const m = Math.floor(countdownSec / 60);
+    const s = countdownSec % 60;
+    countdown.textContent = `${m}:${String(s).padStart(2, '0')}`;
+  }, 1000);
+}
+
+async function fetchAll() {
+  countdown.textContent = '…';
+
+  try {
+    // Current status
+    const statusRes = await fetch(`${API_BASE}/api/status`);
+    if (!statusRes.ok) {
+      const body = await statusRes.json().catch(() => ({}));
+      throw new Error(body.error || `HTTP ${statusRes.status}`);
+    }
+    const reading = await statusRes.json();
+    renderStatus(reading);
+
+    // History (last 24 h = 288 readings at 5 min intervals)
+    const histRes = await fetch(`${API_BASE}/api/history?limit=288`);
+    if (histRes.ok) {
+      const { records } = await histRes.json();
+      renderHistory(records);
+    }
+
+    hideBanner();
+  } catch (err) {
+    let msg = `Erro ao buscar dados: ${err.message}`;
+    if (err.message.includes('fetch') || err.message.includes('Failed')) {
+      msg = 'Não foi possível conectar à API. Verifique se o VPS está acessível via HTTPS.';
+    }
+    showBanner('error', msg);
+  }
+
+  startCountdown();
+}
+
+// ─── Health check banner ──────────────────────────────────────────────────────
+async function checkHealth() {
+  try {
+    const res = await fetch(`${API_BASE}/api/health`);
+    const { ok, data_stale, last_poll, last_error } = await res.json();
+    if (!ok && !last_poll) {
+      showBanner('warn', 'Serviço iniciando — aguardando primeiro ciclo de leitura…');
+    } else if (!ok) {
+      showBanner('warn', `Dados desatualizados. Último erro: ${last_error || 'desconhecido'}`);
+    }
+  } catch (_) { /* health check is best-effort */ }
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+(async function init() {
+  await checkHealth();
+  await fetchAll();
+})();
+</script>
+{{ end }}

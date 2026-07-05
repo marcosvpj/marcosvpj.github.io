@@ -1171,6 +1171,15 @@
     font-size: 2em;
     line-height: 0.1em;
   }
+  article .content blockquote:after {
+    margin-right: 0.25em;
+    color: #2bbc8a;
+    content: "\201C";
+    vertical-align: -0.4em;
+    font-size: 2em;
+    line-height: 0.1em;
+    float: right;
+  }
   article .content blockquote footer {
     margin: line-height 0;
     color: #666;
