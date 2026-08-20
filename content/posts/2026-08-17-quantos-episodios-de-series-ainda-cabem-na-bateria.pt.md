@@ -1,6 +1,6 @@
 +++
 title = "Quantos episodios de séries ainda cabem na bateria"
-date = 2026-08-17T11:04:01-03:00
+date = 2026-08-17
 description = ""
 tags = ["off-grid", "energia eletrica", "energia solar", "desenvolvimento"]
 categories = ["off-grid"]
