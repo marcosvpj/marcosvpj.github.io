@@ -26,7 +26,7 @@ Now I just look to the side and I can see how much battery I have, the forecast 
 
 All well organized, using color patterns so I don't even need to think much about what the numbers mean. In the photo above it's a peaceful day: 80% charge, 22 amps coming in, 3.4 kWh of generation forecast for tomorrow and the last 24 hours chart only going up. Everything in cyan and white, so I can watch whatever I want. When any of these numbers appears in yellow or red, it's a day to turn off the internet early to avoid the risk of running out of power in the middle of work.
 
-Behind it there's not much mystery. The display is one of those ESP32 boards that already come with a 2.8 inch TFT screen soldered on the same little orange board: connects to wifi, fetches the ready data from the [API I made for the battery]({{< ref "2026-04-22-monitorando-minha-bateria-pelo-terminal.pt.md" >}}) and from the weather forecast API, and just draws on the screen.
+Behind it there's not much mystery. The display is one of those ESP32 boards that already come with a 2.8 inch TFT screen soldered on the same little orange board: connects to wifi, fetches the ready data from the API I made for the battery and from the weather forecast API, and just draws on the screen.
 
 ![Back of the display: ESP32 board with integrated TFT screen, fitted in the box](/img/quantos-episodios-de-series-ainda-cabem-na-bateria/placa-esp32.webp)
 
