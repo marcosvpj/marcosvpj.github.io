@@ -49,6 +49,8 @@ jobs:
           repository: marcosvpj/ebiten-match-three-town-builder
           ref: main
           path: game-source
+          token: ${{ secrets.GAME_REPO_TOKEN }}
+          persist-credentials: false
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
