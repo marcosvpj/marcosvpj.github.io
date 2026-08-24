@@ -14,6 +14,11 @@
       "name": "Jalapenhos Caramelizadas",
       "url": "posts/jalapenhos-caramelizadas/",
       "desc": "Doce de pimenta, fica ótimo no café ou no hamburger"
+    },
+    {
+      "name": "Cozy Match-Three Town Builder",
+      "url": "playground/match-three-town-builder/",
+      "desc": "Um jogo de combinar peças e construir uma cidade"
     }
   ]
 }

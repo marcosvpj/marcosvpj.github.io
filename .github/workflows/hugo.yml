@@ -43,6 +43,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+      - name: Checkout game
+        uses: actions/checkout@v4
+        with:
+          repository: marcosvpj/ebiten-match-three-town-builder
+          ref: main
+          path: game-source
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: game-source/go.mod
+      - name: Build game web version
+        run: |
+          make -C game-source build-web
+          mkdir -p static/playground/match-three-town-builder
+          cp game-source/build/web/* static/playground/match-three-town-builder/
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
