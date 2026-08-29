@@ -30,8 +30,22 @@ Backend engineer with 7 years of experience in Go and strong background in large
 
 ## Professional Experience
 
+### **Senior Backend Developer** | Bling! - LWSA
+*November 2025 - Present*
+
+Migration of legacy PHP system to Go microservices.
+
+**Key achievements:**
+- Worked on migrating the tax/fiscal module from a PHP monolith to Go microservices, in an ERP serving 150,000 Brazilian companies, processing over 1.5 million tax invoices per day
+- Modeled fiscal domain with DDD, handling the regulatory complexity of Brazilian tax law (NF-e, NFS-e, and the tax reform)
+- Developed Go services with clear separation between domain and infrastructure, prioritizing testability and ease of change
+
+**Stack:** Go, PHP, MySQL, Kafka, Docker, GCP, AWS, DDD
+
+---
+
 ### **Tech Lead - Backend** | Inovally
-*May 2023 - August 2024*
+*May 2023 - August 2025*
 
 Technically led a team of 6 developers implementing a public debt management platform for municipalities.
 
@@ -57,7 +71,7 @@ Development and maintenance of bots and pipelines for large-scale public data co
 - Worked on development of internal scraping framework accelerating new bot development
 - Co-organized internal technical training program, teaching Docker Compose workshop to 50+ developers
 
-**Stack:** Go, Python, Scrapy, PostgreSQL, MongoDB, Docker
+**Stack:** Go, Python, Scrapy, PostgreSQL, MongoDB, RabbitMQ, Docker
 
 ---
 
@@ -81,7 +95,10 @@ Development of e-commerce and ERP systems for enterprise clients.
 
 ## Additional Experience
 
-**PHP & JavaScript (2010-2017):** 8 years of web development experience, including e-commerce, ERPs, and custom systems. Also worked as a web programming instructor.
+**Teaching & Facilitation**
+
+- Web development instructor (PHP, HTML, and CSS) at vocational courses for ~2 years, training beginner student cohorts
+- Facilitator in internal technical training programs at Neoway and Bling, supporting the development of other developers
 
 ---
 
