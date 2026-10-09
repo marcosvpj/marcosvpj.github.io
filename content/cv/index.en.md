@@ -31,7 +31,7 @@ Backend engineer with 7 years of experience in Go and strong background in large
 ## Professional Experience
 
 ### **Senior Backend Developer** | Bling! - LWSA
-*November 2025 - Present*
+*November 2025 - August 2026*
 
 Migration of legacy PHP system to Go microservices.
 
