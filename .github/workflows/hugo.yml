@@ -44,6 +44,8 @@ jobs:
         with:
           submodules: recursive
       - name: Checkout game
+        id: game
+        continue-on-error: true
         uses: actions/checkout@v4
         with:
           repository: marcosvpj/ebiten-match-three-town-builder
@@ -52,10 +54,14 @@ jobs:
           token: ${{ secrets.GAME_REPO_TOKEN }}
           persist-credentials: false
       - name: Setup Go
+        if: steps.game.outcome == 'success'
+        continue-on-error: true
         uses: actions/setup-go@v5
         with:
           go-version-file: game-source/go.mod
       - name: Build game web version
+        if: steps.game.outcome == 'success'
+        continue-on-error: true
         run: |
           make -C game-source build-web
           mkdir -p static/playground/match-three-town-builder
